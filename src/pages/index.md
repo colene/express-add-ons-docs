@@ -36,14 +36,6 @@ You can also create reports to explore, get insights, or answer important questi
 
 Get started with the Cat Analytics APIs.
 
-<DiscoverBlock slots="heading, link, text"/>
-
-### Guides
-
-[Calculated Metrics API](guides/dummy_metrics_api/)
-
-Returns information on the user's company that is necessary for making other Cat Analytics API calls.
-
 <DiscoverBlock slots="link, text"/>
 
 [Segments API](guides/dummy_oauth_client/)

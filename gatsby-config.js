@@ -25,7 +25,7 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Cat Analytics',
+        title: 'References',
         path: '/'
       },
       {
@@ -36,15 +36,9 @@ module.exports = {
         title: 'API Reference',
         menu: [
           {
-            title: 'Cat Reference v2.0',
-            description: 'Cat Reporting API',
+            title: 'Authoring API',            
             path: '/api/index.md'
-          },
-          {
-            title: 'Cat Reference v1.4',
-            description: 'Cat API Spec',
-            path: '/api/1.4.md'
-          }
+          }          
         ]
       },
       {
@@ -66,11 +60,7 @@ module.exports = {
             path: '/guides/dummy_using_postman/'
           }
         ]
-      },
-      {
-        title: 'Cat Metrics API',
-        path: '/guides/dummy_metrics_api/'
-      },
+      },      
       {
         title: 'Migrating',
         path: '/guides/migrating/'
