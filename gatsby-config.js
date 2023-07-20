@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/express-add-on-apis/',
+  pathPrefix: process.env.PATH_PREFIX || '/express-add-on-apis/docs/',
   siteMetadata: {
     versions: [
       {
