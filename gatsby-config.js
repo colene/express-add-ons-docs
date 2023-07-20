@@ -37,7 +37,7 @@ module.exports = {
         menu: [
           {
             title: 'Authoring API',            
-            path: '/api/index.md'
+            path: '/api/overview.md'
           }          
         ]
       },
