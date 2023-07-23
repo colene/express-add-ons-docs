@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ParagraphListSequenceType
+[ /authoring-api](../overview.md) / ParagraphListSequenceType
 
 # Enumeration: ParagraphListSequenceType
 

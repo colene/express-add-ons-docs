@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ColorFill
+[ /authoring-api](../overview.md) / ColorFill
 
 # Interface: ColorFill
 

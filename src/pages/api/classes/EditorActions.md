@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / EditorActions
+[ /authoring-api](../overview.md) / EditorActions
 
 # Class: EditorActions
 

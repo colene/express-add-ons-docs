@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ParagraphStyleRangeList
+[ /authoring-api](../overview.md) / ParagraphStyleRangeList
 
 # Class: ParagraphStyleRangeList
 

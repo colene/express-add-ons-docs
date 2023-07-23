@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / Context
+[ /authoring-api](../overview.md) / Context
 
 # Class: Context
 

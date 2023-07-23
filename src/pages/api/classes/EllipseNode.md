@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / EllipseNode
+[ /authoring-api](../overview.md) / EllipseNode
 
 # Class: EllipseNode
 

@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / PathNode
+[ /authoring-api](../overview.md) / PathNode
 
 # Class: PathNode
 

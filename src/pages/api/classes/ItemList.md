@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ItemList
+[ /authoring-api](../overview.md) / ItemList
 
 # Class: ItemList<T\>
 

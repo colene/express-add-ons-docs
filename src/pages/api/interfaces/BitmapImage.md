@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / BitmapImage
+[ /authoring-api](../overview.md) / BitmapImage
 
 # Interface: BitmapImage
 

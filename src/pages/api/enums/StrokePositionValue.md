@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / StrokePositionValue
+[ /authoring-api](../overview.md) / StrokePositionValue
 
 # Enumeration: StrokePositionValue
 

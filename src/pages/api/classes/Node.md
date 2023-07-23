@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / Node
+[ /authoring-api](../overview.md) / Node
 
 # Class: Node
 

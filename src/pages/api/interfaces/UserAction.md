@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / UserAction
+[ /authoring-api](../overview.md) / UserAction
 
 # Interface: UserAction<T\>
 

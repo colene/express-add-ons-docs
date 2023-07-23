@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / OrderedListStyle
+[ /authoring-api](../overview.md) / OrderedListStyle
 
 # Interface: OrderedListStyle
 

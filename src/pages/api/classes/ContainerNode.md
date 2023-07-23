@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ContainerNode
+[ /authoring-api](../overview.md) / ContainerNode
 
 # Class: ContainerNode
 

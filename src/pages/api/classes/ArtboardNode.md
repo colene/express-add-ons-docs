@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ArtboardNode
+[ /authoring-api](../overview.md) / ArtboardNode
 
 # Class: ArtboardNode
 

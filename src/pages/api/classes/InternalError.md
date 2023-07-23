@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / InternalError
+[ /authoring-api](../overview.md) / InternalError
 
 # Class: InternalError
 

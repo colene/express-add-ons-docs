@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / Fill
+[ /authoring-api](../overview.md) / Fill
 
 # Interface: Fill
 

@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / GroupNode
+[ /authoring-api](../overview.md) / GroupNode
 
 # Class: GroupNode
 

@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / Color
+[ /authoring-api](../overview.md) / Color
 
 # Class: Color
 

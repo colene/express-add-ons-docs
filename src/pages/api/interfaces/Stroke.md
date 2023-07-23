@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / Stroke
+[ /authoring-api](../overview.md) / Stroke
 
 # Interface: Stroke
 

@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ParagraphListStyleType
+[ /authoring-api](../overview.md) / ParagraphListStyleType
 
 # Enumeration: ParagraphListStyleType
 

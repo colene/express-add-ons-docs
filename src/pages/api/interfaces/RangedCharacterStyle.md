@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / RangedCharacterStyle
+[ /authoring-api](../overview.md) / RangedCharacterStyle
 
 # Interface: RangedCharacterStyle
 

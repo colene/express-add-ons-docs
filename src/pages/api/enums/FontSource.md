@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / FontSource
+[ /authoring-api](../overview.md) / FontSource
 
 # Enumeration: FontSource
 

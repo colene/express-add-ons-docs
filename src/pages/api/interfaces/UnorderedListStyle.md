@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / UnorderedListStyle
+[ /authoring-api](../overview.md) / UnorderedListStyle
 
 # Interface: UnorderedListStyle
 

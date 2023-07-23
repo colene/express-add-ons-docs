@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / RangedParagraphStyle
+[ /authoring-api](../overview.md) / RangedParagraphStyle
 
 # Interface: RangedParagraphStyle
 

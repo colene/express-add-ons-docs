@@ -33,7 +33,7 @@ module.exports = {
       //   path: '/guides/'
       // },
       {
-        title: ' References',
+        title: 'References',
         menu: [
           {
             title: 'Authoring APIs',            

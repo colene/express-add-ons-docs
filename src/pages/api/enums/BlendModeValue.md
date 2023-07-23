@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / BlendModeValue
+[ /authoring-api](../overview.md) / BlendModeValue
 
 # Enumeration: BlendModeValue
 

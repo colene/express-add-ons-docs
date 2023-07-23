@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ColorSpace
+[ /authoring-api](../overview.md) / ColorSpace
 
 # Enumeration: ColorSpace
 

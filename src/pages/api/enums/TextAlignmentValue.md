@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / TextAlignmentValue
+[ /authoring-api](../overview.md) / TextAlignmentValue
 
 # Enumeration: TextAlignmentValue
 

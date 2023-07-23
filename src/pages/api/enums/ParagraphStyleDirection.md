@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / ParagraphStyleDirection
+[ /authoring-api](../overview.md) / ParagraphStyleDirection
 
 # Enumeration: ParagraphStyleDirection
 

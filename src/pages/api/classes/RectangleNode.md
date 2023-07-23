@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / RectangleNode
+[ /authoring-api](../overview.md) / RectangleNode
 
 # Class: RectangleNode
 

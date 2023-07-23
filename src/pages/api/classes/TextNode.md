@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / TextNode
+[ /authoring-api](../overview.md) / TextNode
 
 # Class: TextNode
 

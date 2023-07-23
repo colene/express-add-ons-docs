@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / FontId
+[ /authoring-api](../overview.md) / FontId
 
 # Interface: FontId
 

@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / LineNode
+[ /authoring-api](../overview.md) / LineNode
 
 # Class: LineNode
 

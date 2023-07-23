@@ -1,4 +1,4 @@
-[@hz/authoring-api](../overview.md) / StrokableNode
+[ /authoring-api](../overview.md) / StrokableNode
 
 # Class: StrokableNode
 
