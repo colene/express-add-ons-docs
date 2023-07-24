@@ -12,26 +12,12 @@
 
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || '/express-add-on-apis/docs/',
-  siteMetadata: {
-    // versions: [
-    //   {
-    //     title: 'v2.0',
-    //     selected: true
-    //   },
-    //   {
-    //     title: 'v1.4',
-    //     path: 'https://github.com/AdobeDocs/dev-site'
-    //   }
-    // ],
+  siteMetadata: {    
     pages: [
       {
         title: 'Overview',
         path: '/',        
-      },
-      // {
-      //   title: 'Guides',
-      //   path: '/guides/'
-      // },
+      },      
       {
         title: 'References',
         menu: [

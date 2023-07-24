@@ -14,7 +14,9 @@ API References for use when building Adobe Express add-ons.
 Here you will find a set of API References to use with your Adobe Express add-on development.
 
 ### Authoring APIs
-The Authoring APIs allow you to perform authoring functions like creating shapes and accessing other high-level API features that are inherent to the Adobe Express editor. The [Editor](../pages/api/classes/Editor.md) class is the main entry point into the Authoring APIs.
+The [Authoring APIs](./api/overview.md) allow you to perform authoring functions like creating shapes and accessing other high-level API features that are inherent to the Adobe Express editor. The [Editor](./api/classes/Editor.md) class is the main entry point into the Authoring APIs.
+
+Refer to the [editor-api](https://github.com/AdobeDocs/express-add-on-samples/tree/main/script-runtime-samples/editor-apis) and [image-and-page](https://github.com/AdobeDocs/express-add-on-samples/tree/main/script-runtime-samples/image-and-page) code samples for more details on how to use the authoring APIs.
 
 
 <br/><br/><br/><br/>
