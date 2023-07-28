@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / Fill
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / Fill
 
 # Interface: Fill
 
@@ -27,7 +27,7 @@ The ECS entity for this fill.
 
 #### Defined in
 
-platform/authoring/api/src/Fill.ts:35
+Fill.ts:35
 
 ___
 
@@ -39,4 +39,4 @@ The fill type.
 
 #### Defined in
 
-platform/authoring/api/src/Fill.ts:30
+Fill.ts:30

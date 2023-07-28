@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / Stroke
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / Stroke
 
 # Interface: Stroke
 
@@ -6,7 +6,7 @@ Represents a stroke in the scene graph.
 
 ## Hierarchy
 
-- `StrokeOptions`
+- [`StrokeOptions`](StrokeOptions.md)
 
   ↳ **`Stroke`**
 
@@ -31,11 +31,11 @@ The color of a stroke.
 
 #### Inherited from
 
-StrokeOptions.color
+[StrokeOptions](StrokeOptions.md).[color](StrokeOptions.md#color)
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:30
+Stroke.ts:29
 
 ___
 
@@ -47,11 +47,11 @@ Number of pixels the beginning of dash pattern should be offset along the stroke
 
 #### Inherited from
 
-StrokeOptions.dashOffset
+[StrokeOptions](StrokeOptions.md).[dashOffset](StrokeOptions.md#dashOffset)
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:44
+Stroke.ts:43
 
 ___
 
@@ -65,11 +65,11 @@ repeated along the length of the stroke. The first value represents the first so
 
 #### Inherited from
 
-StrokeOptions.dashPattern
+[StrokeOptions](StrokeOptions.md).[dashPattern](StrokeOptions.md#dashPattern)
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:40
+Stroke.ts:39
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:51
+Stroke.ts:50
 
 ___
 
@@ -92,7 +92,7 @@ Currently, only center position is supported for persisted strokes.
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:57
+Stroke.ts:56
 
 ___
 
@@ -104,8 +104,8 @@ The thickness of a stroke.
 
 #### Inherited from
 
-StrokeOptions.width
+[StrokeOptions](StrokeOptions.md).[width](StrokeOptions.md#width)
 
 #### Defined in
 
-platform/authoring/api/src/Stroke.ts:34
+Stroke.ts:33

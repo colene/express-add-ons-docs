@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / RectangleNode
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / RectangleNode
 
 # Class: RectangleNode
 
@@ -7,23 +7,18 @@ wrapper around the low-level APIs for interacting with scene graph rectangle obj
 
 ## Hierarchy
 
-- `FillableNode`
+- [`FillableNode`](FillableNode.md)
 
   ↳ **`RectangleNode`**
 
 ## Implements
 
-- `IRectangularNode`
+- [`IRectangularNode`](../interfaces/IRectangularNode.md)
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](RectangleNode.md#constructor)
-
 ### Properties
 
-- [\_core](RectangleNode.md#_core)
 - [DEFAULT\_STROKE\_WIDTH](RectangleNode.md#DEFAULT_STROKE_WIDTH)
 
 ### Accessors
@@ -53,56 +48,11 @@ wrapper around the low-level APIs for interacting with scene graph rectangle obj
 
 ### Methods
 
-- [canRemoveChild](RectangleNode.md#canRemoveChild)
 - [getUniformCornerRadius](RectangleNode.md#getUniformCornerRadius)
 - [removeFromParent](RectangleNode.md#removeFromParent)
 - [setUniformCornerRadius](RectangleNode.md#setUniformCornerRadius)
-- [canChangeParent](RectangleNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new RectangleNode**(`entity`, `core`)
-
-**`Throws`**
-
-if the input ECS entity does not have rectangle component.
-
-**`Remarks`**
-
-Please use editor.createRectangle if there is no valid entity for this constructor.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `string` |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Overrides
-
-FillableNode.constructor
-
-#### Defined in
-
-platform/authoring/api/src/RectangleNode.ts:47
 
 ## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-FillableNode.\_core
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
-
-___
 
 ### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
 
@@ -110,11 +60,11 @@ ___
 
 #### Inherited from
 
-FillableNode.DEFAULT\_STROKE\_WIDTH
+[FillableNode](FillableNode.md).[DEFAULT_STROKE_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:36
+StrokableNode.ts:36
 
 ## Accessors
 
@@ -134,7 +84,7 @@ FillableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:159
+Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -154,7 +104,7 @@ FillableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:163
+Node.ts:101
 
 ___
 
@@ -174,7 +124,7 @@ FillableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:257
+Node.ts:150
 
 • `set` **absoluteTransform**(`transform`): `void`
 
@@ -194,7 +144,7 @@ FillableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:261
+Node.ts:155
 
 ___
 
@@ -216,7 +166,7 @@ FillableNode.allChildren
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:58
+Node.ts:34
 
 ___
 
@@ -240,7 +190,7 @@ FillableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:308
+Node.ts:190
 
 • `set` **blendMode**(`value`): `void`
 
@@ -260,7 +210,7 @@ FillableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:311
+Node.ts:194
 
 ___
 
@@ -276,7 +226,7 @@ The radius of the bottom left corner.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:174
+RectangleNode.ts:122
 
 • `set` **bottomLeftRadius**(`value`): `void`
 
@@ -299,7 +249,7 @@ even if the radius value set here is higher.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:185
+RectangleNode.ts:134
 
 ___
 
@@ -315,7 +265,7 @@ The radius of the bottom right corner.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:152
+RectangleNode.ts:103
 
 • `set` **bottomRightRadius**(`value`): `void`
 
@@ -338,7 +288,7 @@ even if the radius value set here is higher.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:163
+RectangleNode.ts:115
 
 ___
 
@@ -358,7 +308,7 @@ FillableNode.entity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:97
+Node.ts:42
 
 ___
 
@@ -378,7 +328,7 @@ FillableNode.fills
 
 #### Defined in
 
-platform/authoring/api/src/FillableNode.ts:39
+FillableNode.ts:39
 
 ___
 
@@ -387,7 +337,7 @@ ___
 • `get` **height**(): `number`
 
 The height of the node.
-Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
+Must be at least MIN_DIMENSION.
 
 #### Returns
 
@@ -395,11 +345,11 @@ Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Implementation of
 
-IRectangularNode.height
+[IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:80
+RectangleNode.ts:53
 
 • `set` **height**(`value`): `void`
 
@@ -415,11 +365,11 @@ platform/authoring/api/src/RectangleNode.ts:80
 
 #### Implementation of
 
-IRectangularNode.height
+[IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:83
+RectangleNode.ts:58
 
 ___
 
@@ -439,7 +389,7 @@ FillableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:293
+Node.ts:174
 
 • `set` **locked**(`locked`): `void`
 
@@ -459,7 +409,7 @@ FillableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:297
+Node.ts:179
 
 ___
 
@@ -479,7 +429,7 @@ FillableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:277
+Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -499,7 +449,7 @@ FillableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:281
+Node.ts:167
 
 ___
 
@@ -519,7 +469,7 @@ FillableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:234
+Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -539,7 +489,7 @@ FillableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:238
+Node.ts:131
 
 ___
 
@@ -559,7 +509,7 @@ FillableNode.parent
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:211
+Node.ts:108
 
 ___
 
@@ -581,7 +531,7 @@ FillableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:148
+Node.ts:84
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -601,7 +551,7 @@ FillableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:152
+Node.ts:89
 
 ___
 
@@ -621,7 +571,7 @@ FillableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:246
+Node.ts:138
 
 • `set` **relativeTransform**(`transform`): `void`
 
@@ -641,7 +591,7 @@ FillableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:250
+Node.ts:143
 
 ___
 
@@ -661,7 +611,7 @@ FillableNode.strokes
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:41
+StrokableNode.ts:41
 
 ___
 
@@ -677,7 +627,7 @@ The radius of the top left corner.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:106
+RectangleNode.ts:65
 
 • `set` **topLeftRadius**(`value`): `void`
 
@@ -700,7 +650,7 @@ even if the radius value set here is higher.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:117
+RectangleNode.ts:77
 
 ___
 
@@ -716,7 +666,7 @@ The radius of the top right corner.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:130
+RectangleNode.ts:84
 
 • `set` **topRightRadius**(`value`): `void`
 
@@ -739,7 +689,7 @@ even if the radius value set here is higher.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:141
+RectangleNode.ts:96
 
 ___
 
@@ -759,7 +709,7 @@ FillableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:116
+Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -779,7 +729,7 @@ FillableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:120
+Node.ts:63
 
 ___
 
@@ -799,7 +749,7 @@ FillableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:131
+Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -819,19 +769,19 @@ FillableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:135
+Node.ts:75
 
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
@@ -839,7 +789,7 @@ FillableNode.type
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:104
+Node.ts:50
 
 ___
 
@@ -848,7 +798,7 @@ ___
 • `get` **width**(): `number`
 
 The width of the node.
-Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
+Must be at least MIN_DIMENSION.
 
 #### Returns
 
@@ -856,11 +806,11 @@ Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Implementation of
 
-IRectangularNode.width
+[IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:69
+RectangleNode.ts:40
 
 • `set` **width**(`value`): `void`
 
@@ -876,41 +826,13 @@ platform/authoring/api/src/RectangleNode.ts:69
 
 #### Implementation of
 
-IRectangularNode.width
+[IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:72
+RectangleNode.ts:45
 
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-Indicates whether a given child of this node can be removed. Certain parent containers impose restrictions on their
-child structure; those subclasses should override this method to implement their specific rules. Do not call this
-directly though - use canChangeParent() instead.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_child` | [`Node`](Node.md) | A child of this node |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-FillableNode.canRemoveChild
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:70
-
-___
 
 ### <a id="getUniformCornerRadius" name="getUniformCornerRadius"></a> getUniformCornerRadius
 
@@ -925,7 +847,7 @@ Otherwise, undefined is returned.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:197
+RectangleNode.ts:142
 
 ___
 
@@ -943,17 +865,17 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Inherited from
 
-FillableNode.removeFromParent
+[FillableNode](FillableNode.md).[removeFromParent](FillableNode.md#removeFromParent)
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:221
+Node.ts:118
 
 ___
 
 ### <a id="setUniformCornerRadius" name="setUniformCornerRadius"></a> setUniformCornerRadius
 
-▸ **setUniformCornerRadius**(`value`): `void`
+▸ **setUniformCornerRadius**(`radius`): `void`
 
 Set all corner radius to the same value. Must be at least 0.
 
@@ -966,7 +888,7 @@ even if the radius value set here is higher.
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `number` |
+| `radius` | `number` |
 
 #### Returns
 
@@ -974,34 +896,4 @@ even if the radius value set here is higher.
 
 #### Defined in
 
-platform/authoring/api/src/RectangleNode.ts:219
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-FillableNode.canChangeParent
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82
+RectangleNode.ts:154

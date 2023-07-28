@@ -1,98 +1,53 @@
-[ /authoring-api](../overview.md) / PathNode
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / FillableNode
 
-# Class: PathNode
+# Class: FillableNode
 
-A PathNode represents a path object. This class is a high-level API
-wrapper around the low-level APIs for path creation.
+Base class for a Node that can have its own fill and stroke.
 
 ## Hierarchy
 
-- `FillableNode`
+- [`StrokableNode`](StrokableNode.md)
 
-  ↳ **`PathNode`**
+  ↳ **`FillableNode`**
+
+  ↳↳ [`EllipseNode`](EllipseNode.md)
+
+  ↳↳ [`RectangleNode`](RectangleNode.md)
+
+## Implements
+
+- [`IFillableNode`](../interfaces/IFillableNode.md)
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](PathNode.md#constructor)
-
 ### Properties
 
-- [\_core](PathNode.md#_core)
-- [DEFAULT\_STROKE\_WIDTH](PathNode.md#DEFAULT_STROKE_WIDTH)
+- [DEFAULT\_STROKE\_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
 
 ### Accessors
 
-- [absoluteRotation](PathNode.md#absoluteRotation)
-- [absoluteTransform](PathNode.md#absoluteTransform)
-- [allChildren](PathNode.md#allChildren)
-- [blendMode](PathNode.md#blendMode)
-- [entity](PathNode.md#entity)
-- [fillRule](PathNode.md#fillRule)
-- [fills](PathNode.md#fills)
-- [locked](PathNode.md#locked)
-- [name](PathNode.md#name)
-- [opacity](PathNode.md#opacity)
-- [parent](PathNode.md#parent)
-- [path](PathNode.md#path)
-- [relativeRotation](PathNode.md#relativeRotation)
-- [relativeTransform](PathNode.md#relativeTransform)
-- [strokes](PathNode.md#strokes)
-- [translateX](PathNode.md#translateX)
-- [translateY](PathNode.md#translateY)
-- [type](PathNode.md#type)
+- [absoluteRotation](FillableNode.md#absoluteRotation)
+- [absoluteTransform](FillableNode.md#absoluteTransform)
+- [allChildren](FillableNode.md#allChildren)
+- [blendMode](FillableNode.md#blendMode)
+- [entity](FillableNode.md#entity)
+- [fills](FillableNode.md#fills)
+- [locked](FillableNode.md#locked)
+- [name](FillableNode.md#name)
+- [opacity](FillableNode.md#opacity)
+- [parent](FillableNode.md#parent)
+- [relativeRotation](FillableNode.md#relativeRotation)
+- [relativeTransform](FillableNode.md#relativeTransform)
+- [strokes](FillableNode.md#strokes)
+- [translateX](FillableNode.md#translateX)
+- [translateY](FillableNode.md#translateY)
+- [type](FillableNode.md#type)
 
 ### Methods
 
-- [canRemoveChild](PathNode.md#canRemoveChild)
-- [removeFromParent](PathNode.md#removeFromParent)
-- [canChangeParent](PathNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new PathNode**(`entity`, `core`)
-
-**`Throws`**
-
-if the input ECS entity does not have path component.
-
-**`Remarks`**
-
-Please use editor.createPath if there is no valid entity for this constructor.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `string` |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Overrides
-
-FillableNode.constructor
-
-#### Defined in
-
-platform/authoring/api/src/PathNode.ts:40
+- [removeFromParent](FillableNode.md#removeFromParent)
 
 ## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-FillableNode.\_core
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
-
-___
 
 ### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
 
@@ -100,11 +55,11 @@ ___
 
 #### Inherited from
 
-FillableNode.DEFAULT\_STROKE\_WIDTH
+[StrokableNode](StrokableNode.md).[DEFAULT_STROKE_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:36
+StrokableNode.ts:36
 
 ## Accessors
 
@@ -120,11 +75,11 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 #### Inherited from
 
-FillableNode.absoluteRotation
+StrokableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:159
+Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -140,11 +95,11 @@ platform/authoring/api/src/Node.ts:159
 
 #### Inherited from
 
-FillableNode.absoluteRotation
+StrokableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:163
+Node.ts:101
 
 ___
 
@@ -160,11 +115,11 @@ The node's absolute (global) transform.
 
 #### Inherited from
 
-FillableNode.absoluteTransform
+StrokableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:257
+Node.ts:150
 
 • `set` **absoluteTransform**(`transform`): `void`
 
@@ -180,11 +135,11 @@ platform/authoring/api/src/Node.ts:257
 
 #### Inherited from
 
-FillableNode.absoluteTransform
+StrokableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:261
+Node.ts:155
 
 ___
 
@@ -202,11 +157,11 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 
 #### Inherited from
 
-FillableNode.allChildren
+StrokableNode.allChildren
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:58
+Node.ts:34
 
 ___
 
@@ -226,11 +181,11 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 #### Inherited from
 
-FillableNode.blendMode
+StrokableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:308
+Node.ts:190
 
 • `set` **blendMode**(`value`): `void`
 
@@ -246,11 +201,11 @@ platform/authoring/api/src/Node.ts:308
 
 #### Inherited from
 
-FillableNode.blendMode
+StrokableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:311
+Node.ts:194
 
 ___
 
@@ -266,27 +221,11 @@ ECS entity for this node.
 
 #### Inherited from
 
-FillableNode.entity
+StrokableNode.entity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:97
-
-___
-
-### <a id="fillRule" name="fillRule"></a> fillRule
-
-• `get` **fillRule**(): `FillRuleValue`
-
-The fill rule specifies how the inside of a path is calculated. The fill rule value is read-only and cannot be modified via this API.
-
-#### Returns
-
-`FillRuleValue`
-
-#### Defined in
-
-platform/authoring/api/src/PathNode.ts:64
+Node.ts:42
 
 ___
 
@@ -300,13 +239,13 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 [`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
 
-#### Inherited from
+#### Implementation of
 
-FillableNode.fills
+[IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
 
 #### Defined in
 
-platform/authoring/api/src/FillableNode.ts:39
+FillableNode.ts:39
 
 ___
 
@@ -322,11 +261,11 @@ The node's lock/unlock state.
 
 #### Inherited from
 
-FillableNode.locked
+StrokableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:293
+Node.ts:174
 
 • `set` **locked**(`locked`): `void`
 
@@ -342,11 +281,11 @@ platform/authoring/api/src/Node.ts:293
 
 #### Inherited from
 
-FillableNode.locked
+StrokableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:297
+Node.ts:179
 
 ___
 
@@ -362,11 +301,11 @@ The node's name.
 
 #### Inherited from
 
-FillableNode.name
+StrokableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:277
+Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -382,11 +321,11 @@ platform/authoring/api/src/Node.ts:277
 
 #### Inherited from
 
-FillableNode.name
+StrokableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:281
+Node.ts:167
 
 ___
 
@@ -402,11 +341,11 @@ The node's opacity.
 
 #### Inherited from
 
-FillableNode.opacity
+StrokableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:234
+Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -422,11 +361,11 @@ platform/authoring/api/src/Node.ts:234
 
 #### Inherited from
 
-FillableNode.opacity
+StrokableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:238
+Node.ts:131
 
 ___
 
@@ -442,28 +381,11 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 #### Inherited from
 
-FillableNode.parent
+StrokableNode.parent
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:211
-
-___
-
-### <a id="path" name="path"></a> path
-
-• `get` **path**(): `string`
-
-The path definition as an SVG string. The path data is read-only and cannot be modified via this API.
-Example: "M 0 0 L 10 15".
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-platform/authoring/api/src/PathNode.ts:51
+Node.ts:108
 
 ___
 
@@ -481,11 +403,11 @@ center, not its origin.
 
 #### Inherited from
 
-FillableNode.relativeRotation
+StrokableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:148
+Node.ts:84
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -501,11 +423,11 @@ platform/authoring/api/src/Node.ts:148
 
 #### Inherited from
 
-FillableNode.relativeRotation
+StrokableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:152
+Node.ts:89
 
 ___
 
@@ -521,11 +443,11 @@ The node's transform relative to its parent.
 
 #### Inherited from
 
-FillableNode.relativeTransform
+StrokableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:246
+Node.ts:138
 
 • `set` **relativeTransform**(`transform`): `void`
 
@@ -541,11 +463,11 @@ platform/authoring/api/src/Node.ts:246
 
 #### Inherited from
 
-FillableNode.relativeTransform
+StrokableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:250
+Node.ts:143
 
 ___
 
@@ -561,11 +483,11 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 
 #### Inherited from
 
-FillableNode.strokes
+StrokableNode.strokes
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:41
+StrokableNode.ts:41
 
 ___
 
@@ -581,11 +503,11 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 #### Inherited from
 
-FillableNode.translateX
+StrokableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:116
+Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -601,11 +523,11 @@ platform/authoring/api/src/Node.ts:116
 
 #### Inherited from
 
-FillableNode.translateX
+StrokableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:120
+Node.ts:63
 
 ___
 
@@ -621,11 +543,11 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 #### Inherited from
 
-FillableNode.translateY
+StrokableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:131
+Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -641,61 +563,33 @@ platform/authoring/api/src/Node.ts:131
 
 #### Inherited from
 
-FillableNode.translateY
+StrokableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:135
+Node.ts:75
 
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
-FillableNode.type
+StrokableNode.type
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:104
+Node.ts:50
 
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-Indicates whether a given child of this node can be removed. Certain parent containers impose restrictions on their
-child structure; those subclasses should override this method to implement their specific rules. Do not call this
-directly though - use canChangeParent() instead.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_child` | [`Node`](Node.md) | A child of this node |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-FillableNode.canRemoveChild
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:70
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -711,38 +605,8 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Inherited from
 
-FillableNode.removeFromParent
+[StrokableNode](StrokableNode.md).[removeFromParent](StrokableNode.md#removeFromParent)
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:221
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-FillableNode.canChangeParent
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82
+Node.ts:118

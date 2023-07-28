@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / ColorFill
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / ColorFill
 
 # Interface: ColorFill
 
@@ -28,7 +28,7 @@ The fill color.
 
 #### Defined in
 
-platform/authoring/api/src/Fill.ts:50
+Fill.ts:50
 
 ___
 
@@ -44,13 +44,13 @@ The ECS entity for this fill.
 
 #### Defined in
 
-platform/authoring/api/src/Fill.ts:35
+Fill.ts:35
 
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `Readonly` **type**: `color`
+• `Readonly` **type**: [`color`](../enums/FillTypeValue.md#color)
 
 The fill type.
 
@@ -60,4 +60,4 @@ The fill type.
 
 #### Defined in
 
-platform/authoring/api/src/Fill.ts:45
+Fill.ts:45

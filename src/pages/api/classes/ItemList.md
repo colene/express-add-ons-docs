@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / ItemList
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / ItemList
 
 # Class: ItemList<T\>
 
@@ -15,11 +15,13 @@ ItemList also provides APIs for manipulating the list by adding items to the par
 | :------ | :------ |
 | `T` | extends `ListItem` |
 
+## Hierarchy
+
+- `TemplatizedProxyLiveObject`
+
+  ↳ **`ItemList`**
+
 ## Table of contents
-
-### Constructors
-
-- [constructor](ItemList.md#constructor)
 
 ### Accessors
 
@@ -39,31 +41,6 @@ ItemList also provides APIs for manipulating the list by adding items to the par
 - [replace](ItemList.md#replace)
 - [toArray](ItemList.md#toArray)
 
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new ItemList**<`T`\>(`_parentEntity`, `_childrenUtils`, `_toWrapper`, `_hasFixedParent`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `ListItem` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_parentEntity` | `string` | Parent node whose children this ItemList presents a live, mutable view of. |
-| `_childrenUtils` | `ChildrenUtils` | ChildrenUtils for the flavor of child list (which ChildOf component) this list represents. |
-| `_toWrapper` | (`entity`: `string`) => `T` | Converts a child entity in this list to a public API wrapper object of the appropriate type (some                     subclass of type T). |
-| `_hasFixedParent` | (`item`: `T`) => `boolean` | Returns false if the given item cannot be reparented. |
-
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:44
-
 ## Accessors
 
 ### <a id="first" name="first"></a> first
@@ -78,7 +55,7 @@ First item in this list, or undefined if list is empty.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:61
+ItemList.ts:49
 
 ___
 
@@ -94,7 +71,7 @@ Last item in this list, or undefined if list is empty.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:69
+ItemList.ts:57
 
 ___
 
@@ -110,7 +87,7 @@ Number of items in this list.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:54
+ItemList.ts:41
 
 ## Methods
 
@@ -126,7 +103,7 @@ Iterates over all the items in this list. Mutations that occur mid-iteration are
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:230
+ItemList.ts:146
 
 ___
 
@@ -149,7 +126,7 @@ removed from their previous parent, if any – or if an item is already in *this
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:90
+ItemList.ts:76
 
 ___
 
@@ -165,7 +142,7 @@ Remove all items from this list. No-op if list is already empty.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:145
+ItemList.ts:93
 
 ___
 
@@ -190,7 +167,7 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:195
+ItemList.ts:133
 
 ___
 
@@ -215,7 +192,7 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:186
+ItemList.ts:118
 
 ___
 
@@ -238,7 +215,7 @@ list - if a node holds children in other "slots" as well they are not part of th
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:80
+ItemList.ts:67
 
 ___
 
@@ -261,7 +238,7 @@ Throws without performing any removals if any item is not a member of this list.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:126
+ItemList.ts:85
 
 ___
 
@@ -286,7 +263,7 @@ changed. No-op if both arguments are the same item.
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:157
+ItemList.ts:103
 
 ___
 
@@ -302,4 +279,4 @@ readonly `T`[]
 
 #### Defined in
 
-platform/authoring/api/src/ItemList.ts:237
+ItemList.ts:153

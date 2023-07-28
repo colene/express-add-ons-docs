@@ -1,35 +1,22 @@
-[ /authoring-api](../overview.md) / Context
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / Context
 
 # Class: Context
 
 Contains the user's current selection state, indicating the content they are focused on.
 
+## Hierarchy
+
+- `ProxyLiveObject`
+
+  ↳ **`Context`**
+
 ## Table of contents
-
-### Constructors
-
-- [constructor](Context.md#constructor)
 
 ### Accessors
 
 - [hasSelection](Context.md#hasSelection)
+- [insertionParent](Context.md#insertionParent)
 - [selection](Context.md#selection)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new Context**(`_core`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Defined in
-
-platform/authoring/api/src/Context.ts:26
 
 ## Accessors
 
@@ -45,7 +32,23 @@ false if the current editable selection does not contain any nodes, otherwise tr
 
 #### Defined in
 
-platform/authoring/api/src/Context.ts:38
+Context.ts:38
+
+___
+
+### <a id="insertionParent" name="insertionParent"></a> insertionParent
+
+• `get` **insertionParent**(): [`Node`](Node.md)
+
+#### Returns
+
+[`Node`](Node.md)
+
+the parent to insert newly added content into.
+
+#### Defined in
+
+Context.ts:46
 
 ___
 
@@ -61,4 +64,4 @@ the current selection.
 
 #### Defined in
 
-platform/authoring/api/src/Context.ts:31
+Context.ts:30

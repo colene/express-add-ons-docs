@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / BlendModeValue
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / BlendModeValue
 
 # Enumeration: BlendModeValue
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:139
+support/HzScenegraphTypes.ts:82
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:128
+support/HzScenegraphTypes.ts:69
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:131
+support/HzScenegraphTypes.ts:72
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:127
+support/HzScenegraphTypes.ts:68
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:135
+support/HzScenegraphTypes.ts:76
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:136
+support/HzScenegraphTypes.ts:77
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:134
+support/HzScenegraphTypes.ts:75
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:137
+support/HzScenegraphTypes.ts:80
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:129
+support/HzScenegraphTypes.ts:70
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:140
+support/HzScenegraphTypes.ts:83
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:126
+support/HzScenegraphTypes.ts:67
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:125
+support/HzScenegraphTypes.ts:66
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:132
+support/HzScenegraphTypes.ts:73
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:124
+support/HzScenegraphTypes.ts:63
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:138
+support/HzScenegraphTypes.ts:81
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:130
+support/HzScenegraphTypes.ts:71
 
 ___
 
@@ -192,4 +192,4 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:133
+support/HzScenegraphTypes.ts:74

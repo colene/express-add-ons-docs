@@ -1,43 +1,41 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / TextNode
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / MediaContainerNode
 
-# Class: TextNode
+# Class: MediaContainerNode
 
-A TextNode represents a text object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scenegraph text objects in ECS.
+A MediaContainerNode is a multi-node construct that displays media (such as images or video) with optional cropping and
+clipping to a shape mask. The underlying media asset is always rectangular, but the final appearance of this node is
+determined by the maskShape which is not necessarily a rectangle.
 
 ## Hierarchy
 
 - [`Node`](Node.md)
 
-  ↳ **`TextNode`**
+  ↳ **`MediaContainerNode`**
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](TextNode.md#absoluteRotation)
-- [absoluteTransform](TextNode.md#absoluteTransform)
-- [allChildren](TextNode.md#allChildren)
-- [blendMode](TextNode.md#blendMode)
-- [characterStyleRanges](TextNode.md#characterStyleRanges)
-- [entity](TextNode.md#entity)
-- [locked](TextNode.md#locked)
-- [name](TextNode.md#name)
-- [opacity](TextNode.md#opacity)
-- [paragraphStyleRanges](TextNode.md#paragraphStyleRanges)
-- [parent](TextNode.md#parent)
-- [relativeRotation](TextNode.md#relativeRotation)
-- [relativeTransform](TextNode.md#relativeTransform)
-- [text](TextNode.md#text)
-- [textAlignment](TextNode.md#textAlignment)
-- [translateX](TextNode.md#translateX)
-- [translateY](TextNode.md#translateY)
-- [type](TextNode.md#type)
+- [absoluteRotation](MediaContainerNode.md#absoluteRotation)
+- [absoluteTransform](MediaContainerNode.md#absoluteTransform)
+- [allChildren](MediaContainerNode.md#allChildren)
+- [blendMode](MediaContainerNode.md#blendMode)
+- [entity](MediaContainerNode.md#entity)
+- [locked](MediaContainerNode.md#locked)
+- [maskShape](MediaContainerNode.md#maskShape)
+- [mediaRectangle](MediaContainerNode.md#mediaRectangle)
+- [name](MediaContainerNode.md#name)
+- [opacity](MediaContainerNode.md#opacity)
+- [parent](MediaContainerNode.md#parent)
+- [relativeRotation](MediaContainerNode.md#relativeRotation)
+- [relativeTransform](MediaContainerNode.md#relativeTransform)
+- [translateX](MediaContainerNode.md#translateX)
+- [translateY](MediaContainerNode.md#translateY)
+- [type](MediaContainerNode.md#type)
 
 ### Methods
 
-- [removeFromParent](TextNode.md#removeFromParent)
-- [resize](TextNode.md#resize)
+- [removeFromParent](MediaContainerNode.md#removeFromParent)
 
 ## Accessors
 
@@ -187,22 +185,6 @@ Node.ts:194
 
 ___
 
-### <a id="characterStyleRanges" name="characterStyleRanges"></a> characterStyleRanges
-
-• `get` **characterStyleRanges**(): [`CharacterStyleRangeList`](CharacterStyleRangeList.md)
-
-The character style ranges of a text node.
-
-#### Returns
-
-[`CharacterStyleRangeList`](CharacterStyleRangeList.md)
-
-#### Defined in
-
-TextNode.ts:33
-
-___
-
 ### <a id="entity" name="entity"></a> entity
 
 • `get` **entity**(): `string`
@@ -260,6 +242,42 @@ Node.locked
 #### Defined in
 
 Node.ts:179
+
+___
+
+### <a id="maskShape" name="maskShape"></a> maskShape
+
+• `get` **maskShape**(): [`FillableNode`](FillableNode.md)
+
+The mask used for cropping/clipping the media. The bounds of this shape are entire visible bounds of the container.
+The shape's geometric properties (position, rotation, size, etc.) can be changed, but it cannot be replaced by a
+different shape via this API (see HZ-12247).
+
+#### Returns
+
+[`FillableNode`](FillableNode.md)
+
+#### Defined in
+
+MediaContainerNode.ts:46
+
+___
+
+### <a id="mediaRectangle" name="mediaRectangle"></a> mediaRectangle
+
+• `get` **mediaRectangle**(): [`Node`](Node.md) \| `ImageRectangleNode`
+
+The rectangular node representing the entire, uncropped bounds of the media (image or video). The media's position and
+rotation can be changed, but it cannot be resized yet via this API (see HZ-17885 & HZ-12247). Detailed media information
+is only available for images for now; other media types will yield a plain Node object (see HZ-15896).
+
+#### Returns
+
+[`Node`](Node.md) \| `ImageRectangleNode`
+
+#### Defined in
+
+MediaContainerNode.ts:36
 
 ___
 
@@ -340,22 +358,6 @@ Node.opacity
 #### Defined in
 
 Node.ts:131
-
-___
-
-### <a id="paragraphStyleRanges" name="paragraphStyleRanges"></a> paragraphStyleRanges
-
-• `get` **paragraphStyleRanges**(): [`ParagraphStyleRangeList`](ParagraphStyleRangeList.md)
-
-The paragraph style ranges of a text node.
-
-#### Returns
-
-[`ParagraphStyleRangeList`](ParagraphStyleRangeList.md)
-
-#### Defined in
-
-TextNode.ts:41
 
 ___
 
@@ -458,70 +460,6 @@ Node.relativeTransform
 #### Defined in
 
 Node.ts:143
-
-___
-
-### <a id="text" name="text"></a> text
-
-• `get` **text**(): `string`
-
-The text string of the node
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-TextNode.ts:49
-
-• `set` **text**(`textContent`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `textContent` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-TextNode.ts:53
-
-___
-
-### <a id="textAlignment" name="textAlignment"></a> textAlignment
-
-• `get` **textAlignment**(): [`TextAlignmentValue`](../enums/TextAlignmentValue.md)
-
-The horizontal text alignment of the text node. Alignment is always the same across this node's entire text content.
-
-#### Returns
-
-[`TextAlignmentValue`](../enums/TextAlignmentValue.md)
-
-#### Defined in
-
-TextNode.ts:76
-
-• `set` **textAlignment**(`alignment`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `alignment` | [`TextAlignmentValue`](../enums/TextAlignmentValue.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-TextNode.ts:81
 
 ___
 
@@ -644,27 +582,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Defined in
 
 Node.ts:118
-
-___
-
-### <a id="resize" name="resize"></a> resize
-
-▸ **resize**(`width`, `height`): `void`
-
-Resizes the text node. Note that unlike other node types, TextNode uses this resize
-method instead of 'node.width' and 'node.height' due to unique behavior for text.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `width` | `number` | the width of the node |
-| `height` | `number` | the height of the node |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-TextNode.ts:63

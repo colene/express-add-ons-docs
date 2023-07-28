@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / StrokableNode
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / StrokableNode
 
 # Class: StrokableNode
 
@@ -12,19 +12,16 @@ Base class for a Node that can have its own stroke.
 
   ↳↳ [`LineNode`](LineNode.md)
 
+  ↳↳ [`FillableNode`](FillableNode.md)
+
 ## Implements
 
 - `IStrokableNode`
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](StrokableNode.md#constructor)
-
 ### Properties
 
-- [\_core](StrokableNode.md#_core)
 - [DEFAULT\_STROKE\_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
 
 ### Accessors
@@ -47,46 +44,9 @@ Base class for a Node that can have its own stroke.
 
 ### Methods
 
-- [canRemoveChild](StrokableNode.md#canRemoveChild)
 - [removeFromParent](StrokableNode.md#removeFromParent)
-- [canChangeParent](StrokableNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new StrokableNode**(`_entity`, `_core`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_entity` | `string` |
-| `_core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Inherited from
-
-[Node](Node.md).[constructor](Node.md#constructor)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
 
 ## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-[Node](Node.md).[_core](Node.md#_core)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
-
-___
 
 ### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
 
@@ -94,7 +54,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:36
+StrokableNode.ts:36
 
 ## Accessors
 
@@ -114,7 +74,7 @@ Node.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:159
+Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -134,7 +94,7 @@ Node.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:163
+Node.ts:101
 
 ___
 
@@ -154,7 +114,7 @@ Node.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:257
+Node.ts:150
 
 • `set` **absoluteTransform**(`transform`): `void`
 
@@ -174,7 +134,7 @@ Node.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:261
+Node.ts:155
 
 ___
 
@@ -196,7 +156,7 @@ Node.allChildren
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:58
+Node.ts:34
 
 ___
 
@@ -220,7 +180,7 @@ Node.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:308
+Node.ts:190
 
 • `set` **blendMode**(`value`): `void`
 
@@ -240,7 +200,7 @@ Node.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:311
+Node.ts:194
 
 ___
 
@@ -260,7 +220,7 @@ Node.entity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:97
+Node.ts:42
 
 ___
 
@@ -280,7 +240,7 @@ Node.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:293
+Node.ts:174
 
 • `set` **locked**(`locked`): `void`
 
@@ -300,7 +260,7 @@ Node.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:297
+Node.ts:179
 
 ___
 
@@ -320,7 +280,7 @@ Node.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:277
+Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -340,7 +300,7 @@ Node.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:281
+Node.ts:167
 
 ___
 
@@ -360,7 +320,7 @@ Node.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:234
+Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -380,7 +340,7 @@ Node.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:238
+Node.ts:131
 
 ___
 
@@ -400,7 +360,7 @@ Node.parent
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:211
+Node.ts:108
 
 ___
 
@@ -422,7 +382,7 @@ Node.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:148
+Node.ts:84
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -442,7 +402,7 @@ Node.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:152
+Node.ts:89
 
 ___
 
@@ -462,7 +422,7 @@ Node.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:246
+Node.ts:138
 
 • `set` **relativeTransform**(`transform`): `void`
 
@@ -482,7 +442,7 @@ Node.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:250
+Node.ts:143
 
 ___
 
@@ -502,7 +462,7 @@ IStrokableNode.strokes
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:41
+StrokableNode.ts:41
 
 ___
 
@@ -522,7 +482,7 @@ Node.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:116
+Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -542,7 +502,7 @@ Node.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:120
+Node.ts:63
 
 ___
 
@@ -562,7 +522,7 @@ Node.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:131
+Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -582,19 +542,19 @@ Node.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:135
+Node.ts:75
 
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
@@ -602,37 +562,9 @@ Node.type
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:104
+Node.ts:50
 
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-Indicates whether a given child of this node can be removed. Certain parent containers impose restrictions on their
-child structure; those subclasses should override this method to implement their specific rules. Do not call this
-directly though - use canChangeParent() instead.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_child` | [`Node`](Node.md) | A child of this node |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[Node](Node.md).[canRemoveChild](Node.md#canRemoveChild)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:70
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -652,34 +584,4 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:221
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-[Node](Node.md).[canChangeParent](Node.md#canChangeParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82
+Node.ts:118

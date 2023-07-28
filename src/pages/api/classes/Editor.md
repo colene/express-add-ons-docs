@@ -1,8 +1,8 @@
-[ /authoring-api](../overview.md) / Editor
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / Editor
 
-# Class: Editor
+# Class: Editor<TenantRootNode\>
 
-Entry point to the authoring APIs.
+Entry point for Horizon's high-level API.
 
 ## Type parameters
 
@@ -10,19 +10,17 @@ Entry point to the authoring APIs.
 | :------ | :------ |
 | `TenantRootNode` | extends [`Node`](Node.md) = [`Node`](Node.md) |
 
+## Hierarchy
+
+- `ProxyLiveObject`
+
+  ↳ **`Editor`**
+
 ## Table of contents
-
-### Constructors
-
-- [constructor](Editor.md#constructor)
-
-### Properties
-
-- [actions](Editor.md#actions)
-- [context](Editor.md#context)
 
 ### Accessors
 
+- [context](Editor.md#context)
 - [documentRoot](Editor.md#documentRoot)
 
 ### Methods
@@ -42,54 +40,24 @@ Entry point to the authoring APIs.
 - [getNodesForEntities](Editor.md#getNodesForEntities)
 - [loadBitmapImage](Editor.md#loadBitmapImage)
 
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new Editor**<`TenantRootNode`\>(`_core`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TenantRootNode` | extends [`Node`](Node.md)<`TenantRootNode`\> = [`Node`](Node.md) |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_core` | `CoreDependencies`<`TenantRootNode`\> |
-
-#### Defined in
-
-platform/authoring/api/src/Editor.ts:112
-
-## Properties
-
-### <a id="actions" name="actions"></a> actions
-
-• `Readonly` **actions**: [`EditorActions`](EditorActions.md)
-
-"Namespace" for methods related to registration and execution of a
-[UserAction](../interfaces/UserAction.md).
-
-#### Defined in
-
-platform/authoring/api/src/Editor.ts:105
-
-___
+## Accessors
 
 ### <a id="context" name="context"></a> context
 
-• `Readonly` **context**: [`Context`](Context.md)
+• `get` **context**(): [`Context`](Context.md)
 
+[wxpAddOn]
 User's current selection context
+
+#### Returns
+
+[`Context`](Context.md)
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:110
+Editor.ts:48
 
-## Accessors
+___
 
 ### <a id="documentRoot" name="documentRoot"></a> documentRoot
 
@@ -103,7 +71,7 @@ the root of the document.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:120
+Editor.ts:56
 
 ## Methods
 
@@ -130,7 +98,7 @@ Hence, proceed with caution with reparenting TemporalArtboardContainer, Temporal
 
 | Name | Type |
 | :------ | :------ |
-| `geometry` | `RectangleGeometry` |
+| `geometry` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) |
 
 #### Returns
 
@@ -144,7 +112,7 @@ an object containing the first ArtboardNode.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:141
+Editor.ts:78
 
 ___
 
@@ -161,7 +129,7 @@ Transform values default to 0.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:158
+Editor.ts:89
 
 ___
 
@@ -181,7 +149,7 @@ TODO [HZ-24464]: remove this deprecated API.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `bitmapData` | `Blob` | Encoded image data in PNG or JPEG format. |
-| `initialSize` | `RectangleGeometry` | Size the image is displayed at. Must have the same aspect ratio as bitmapData! |
+| `initialSize` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | Size the image is displayed at. Must have the same aspect ratio as bitmapData! |
 
 #### Returns
 
@@ -191,7 +159,7 @@ Generic opaque Node representing the CropGroup structure.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:252
+Editor.ts:148
 
 ___
 
@@ -213,7 +181,7 @@ a color fill.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:232
+Editor.ts:133
 
 ___
 
@@ -230,7 +198,7 @@ Transform values default to 0.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:174
+Editor.ts:98
 
 ___
 
@@ -246,13 +214,13 @@ a group node.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:223
+Editor.ts:124
 
 ___
 
 ### <a id="createImageContainer" name="createImageContainer"></a> createImageContainer
 
-▸ **createImageContainer**(`bitmapData`, `options?`): `MediaContainerNode`
+▸ **createImageContainer**(`bitmapData`, `options?`): [`MediaContainerNode`](MediaContainerNode.md)
 
 Creates a bitmap image, represented as a multi-node MediaContainerNode structure. Always creates a "full-frame,"
 uncropped image initially, but cropping can be changed after it is created by modifying the properties of the
@@ -271,17 +239,17 @@ in the document, this API will create a 2nd duplicate resource, wasting user sto
 | :------ | :------ | :------ |
 | `bitmapData` | [`BitmapImage`](../interfaces/BitmapImage.md) | BitmapImage resource (e.g. returned from loadBitmapImage()). |
 | `options` | `Object` | Additional configuration:      - initialSize - Size the image is displayed at. Must have the same aspect ratio as bitmapData! Defaults to the        size the image would be created at by a UI drag-drop gesture (typically the image's full size, but scaled down        if needed to stay below an application-defined size cap). |
-| `options.initialSize?` | `RectangleGeometry` | - |
+| `options.initialSize?` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | - |
 
 #### Returns
 
-`MediaContainerNode`
+[`MediaContainerNode`](MediaContainerNode.md)
 
 MediaContainerNode representing the top container node of the CropGroup structure.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:281
+Editor.ts:177
 
 ___
 
@@ -298,7 +266,7 @@ Transform values default to 0.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:199
+Editor.ts:116
 
 ___
 
@@ -315,7 +283,7 @@ Transform values default to 0.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:187
+Editor.ts:107
 
 ___
 
@@ -323,10 +291,10 @@ ___
 
 ▸ **createStroke**(`options?`): [`Stroke`](../interfaces/Stroke.md)
 
-The stroke color has default value [DEFAULT_STROKE_COLOR](../overview.md#DEFAULT_STROKE_COLOR) if none is provided.
+The stroke color has default value DEFAULT_STROKE_COLOR if none is provided.
 
-The stroke width has default value [DEFAULT_STROKE_WIDTH](../overview.md#DEFAULT_STROKE_WIDTH) if none is provided.
-Otherwise, the value must be from [MIN_STROKE_WIDTH](../overview.md#MIN_STROKE_WIDTH) to [MAX_STROKE_WIDTH](../overview.md#MAX_STROKE_WIDTH).
+The stroke width has default value DEFAULT_STROKE_WIDTH if none is provided.
+Otherwise, the value must be from MIN_STROKE_WIDTH to MAX_STROKE_WIDTH.
 
 The dash pattern has default value [] if none is provided. If the dash pattern has
 odd number of elements, the items are copied to double the array.
@@ -341,7 +309,7 @@ stroke has dash offset of 0.)
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `Partial`<`StrokeOptions`\> |
+| `options?` | `Partial`<[`StrokeOptions`](../interfaces/StrokeOptions.md)\> |
 
 #### Returns
 
@@ -351,7 +319,7 @@ a stroke with center position, as only this position is currently supported.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:404
+Editor.ts:220
 
 ___
 
@@ -368,7 +336,7 @@ invisible until its `text` property is set.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:474
+Editor.ts:247
 
 ___
 
@@ -390,7 +358,7 @@ a suitable Node subclass wrapper corresponding to its type.
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:458
+Editor.ts:229
 
 ___
 
@@ -412,7 +380,7 @@ list of suitable Node subclass wrappers, each matching the corresponding entity'
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:466
+Editor.ts:238
 
 ___
 
@@ -438,4 +406,4 @@ immediately. The local client will act as having unsaved changes until the uploa
 
 #### Defined in
 
-platform/authoring/api/src/Editor.ts:330
+Editor.ts:198

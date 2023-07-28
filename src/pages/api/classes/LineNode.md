@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / LineNode
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / LineNode
 
 # Class: LineNode
 
@@ -13,13 +13,8 @@ wrapper around the low-level APIs for interacting with scene graph line objects 
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](LineNode.md#constructor)
-
 ### Properties
 
-- [\_core](LineNode.md#_core)
 - [DEFAULT\_END\_X](LineNode.md#DEFAULT_END_X)
 - [DEFAULT\_END\_Y](LineNode.md#DEFAULT_END_Y)
 - [DEFAULT\_START\_X](LineNode.md#DEFAULT_START_X)
@@ -52,47 +47,10 @@ wrapper around the low-level APIs for interacting with scene graph line objects 
 
 ### Methods
 
-- [canRemoveChild](LineNode.md#canRemoveChild)
 - [removeFromParent](LineNode.md#removeFromParent)
 - [setEndPoints](LineNode.md#setEndPoints)
-- [canChangeParent](LineNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new LineNode**(`entity`, `core`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `string` |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Overrides
-
-[StrokableNode](StrokableNode.md).[constructor](StrokableNode.md#constructor)
-
-#### Defined in
-
-platform/authoring/api/src/LineNode.ts:41
 
 ## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-[StrokableNode](StrokableNode.md).[_core](StrokableNode.md#_core)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
-
-___
 
 ### <a id="DEFAULT_END_X" name="DEFAULT_END_X"></a> DEFAULT\_END\_X
 
@@ -100,7 +58,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:38
+LineNode.ts:31
 
 ___
 
@@ -110,7 +68,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:39
+LineNode.ts:32
 
 ___
 
@@ -120,7 +78,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:36
+LineNode.ts:29
 
 ___
 
@@ -130,7 +88,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:37
+LineNode.ts:30
 
 ___
 
@@ -144,7 +102,7 @@ ___
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:36
+StrokableNode.ts:36
 
 ## Accessors
 
@@ -164,7 +122,7 @@ StrokableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:159
+Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -184,7 +142,7 @@ StrokableNode.absoluteRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:163
+Node.ts:101
 
 ___
 
@@ -204,7 +162,7 @@ StrokableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:257
+Node.ts:150
 
 • `set` **absoluteTransform**(`transform`): `void`
 
@@ -224,7 +182,7 @@ StrokableNode.absoluteTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:261
+Node.ts:155
 
 ___
 
@@ -246,7 +204,7 @@ StrokableNode.allChildren
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:58
+Node.ts:34
 
 ___
 
@@ -270,7 +228,7 @@ StrokableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:308
+Node.ts:190
 
 • `set` **blendMode**(`value`): `void`
 
@@ -290,28 +248,32 @@ StrokableNode.blendMode
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:311
+Node.ts:194
 
 ___
 
 ### <a id="endArrowHeadType" name="endArrowHeadType"></a> endArrowHeadType
 
-• `get` **endArrowHeadType**(): `ArrowHeadType`
+• `get` **endArrowHeadType**(): [`ArrowHeadType`](../enums/ArrowHeadType.md)
 
 The shape encapsulating the end of a line. The size and color of the arrowhead
 depends on the first available stroke's weight and color assigned to the node.
 Removal of all strokes on this line leads to the arrowhead's removal.
 
-The getter returns ArrowHeadType.none when there are no strokes on the line
+The
+
+**`Proxy Api`**
+
+getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
 or no arrowhead on the first stroke of the line.
 
 #### Returns
 
-`ArrowHeadType`
+[`ArrowHeadType`](../enums/ArrowHeadType.md)
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:223
+LineNode.ts:118
 
 • `set` **endArrowHeadType**(`type`): `void`
 
@@ -322,7 +284,7 @@ and updates the arrowhead on only the first stroke of the line.
 
 | Name | Type |
 | :------ | :------ |
-| `type` | `ArrowHeadType` |
+| `type` | [`ArrowHeadType`](../enums/ArrowHeadType.md) |
 
 #### Returns
 
@@ -330,7 +292,7 @@ and updates the arrowhead on only the first stroke of the line.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:231
+LineNode.ts:126
 
 ___
 
@@ -346,7 +308,7 @@ The end point on the x-axis in the parent's coordinate system.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:142
+LineNode.ts:75
 
 ___
 
@@ -362,7 +324,7 @@ The end point on the y-axis in the parent's coordinate system.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:154
+LineNode.ts:83
 
 ___
 
@@ -382,7 +344,7 @@ StrokableNode.entity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:97
+Node.ts:42
 
 ___
 
@@ -402,7 +364,7 @@ StrokableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:293
+Node.ts:174
 
 • `set` **locked**(`locked`): `void`
 
@@ -422,7 +384,7 @@ StrokableNode.locked
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:297
+Node.ts:179
 
 ___
 
@@ -442,7 +404,7 @@ StrokableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:277
+Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -462,7 +424,7 @@ StrokableNode.name
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:281
+Node.ts:167
 
 ___
 
@@ -482,7 +444,7 @@ StrokableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:234
+Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -502,7 +464,7 @@ StrokableNode.opacity
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:238
+Node.ts:131
 
 ___
 
@@ -522,7 +484,7 @@ StrokableNode.parent
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:211
+Node.ts:108
 
 ___
 
@@ -544,7 +506,7 @@ StrokableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:148
+Node.ts:84
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -564,7 +526,7 @@ StrokableNode.relativeRotation
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:152
+Node.ts:89
 
 ___
 
@@ -584,7 +546,7 @@ StrokableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:246
+Node.ts:138
 
 • `set` **relativeTransform**(`transform`): `void`
 
@@ -604,28 +566,32 @@ StrokableNode.relativeTransform
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:250
+Node.ts:143
 
 ___
 
 ### <a id="startArrowHeadType" name="startArrowHeadType"></a> startArrowHeadType
 
-• `get` **startArrowHeadType**(): `ArrowHeadType`
+• `get` **startArrowHeadType**(): [`ArrowHeadType`](../enums/ArrowHeadType.md)
 
 The shape encapsulating the start of a line. The size and color of the arrowhead
 depends on the first available stroke's weight and color assigned to the node.
 Removal of all strokes on this line leads to the arrowhead's removal.
 
-The getter returns ArrowHeadType.none when there are no strokes on the line
+The
+
+**`Proxy Api`**
+
+getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
 or no arrowhead on the first stroke of the line.
 
 #### Returns
 
-`ArrowHeadType`
+[`ArrowHeadType`](../enums/ArrowHeadType.md)
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:194
+LineNode.ts:97
 
 • `set` **startArrowHeadType**(`type`): `void`
 
@@ -636,7 +602,7 @@ and updates the arrowhead on only the first stroke of the line.
 
 | Name | Type |
 | :------ | :------ |
-| `type` | `ArrowHeadType` |
+| `type` | [`ArrowHeadType`](../enums/ArrowHeadType.md) |
 
 #### Returns
 
@@ -644,7 +610,7 @@ and updates the arrowhead on only the first stroke of the line.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:202
+LineNode.ts:105
 
 ___
 
@@ -660,7 +626,7 @@ The start point on the x-axis in the parent's coordinate system.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:118
+LineNode.ts:59
 
 ___
 
@@ -676,7 +642,7 @@ The start point on the y-axis in the parent's coordinate system.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:130
+LineNode.ts:67
 
 ___
 
@@ -696,7 +662,7 @@ StrokableNode.strokes
 
 #### Defined in
 
-platform/authoring/api/src/StrokableNode.ts:41
+StrokableNode.ts:41
 
 ___
 
@@ -716,7 +682,7 @@ StrokableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:116
+Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -736,7 +702,7 @@ StrokableNode.translateX
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:120
+Node.ts:63
 
 ___
 
@@ -756,7 +722,7 @@ StrokableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:131
+Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -776,19 +742,19 @@ StrokableNode.translateY
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:135
+Node.ts:75
 
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
@@ -796,37 +762,9 @@ StrokableNode.type
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:104
+Node.ts:50
 
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-Indicates whether a given child of this node can be removed. Certain parent containers impose restrictions on their
-child structure; those subclasses should override this method to implement their specific rules. Do not call this
-directly though - use canChangeParent() instead.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_child` | [`Node`](Node.md) | A child of this node |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[StrokableNode](StrokableNode.md).[canRemoveChild](StrokableNode.md#canRemoveChild)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:70
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -846,7 +784,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Defined in
 
-platform/authoring/api/src/Node.ts:221
+Node.ts:118
 
 ___
 
@@ -856,7 +794,11 @@ ___
 
 Set the start and end points of the line in the coordinate space of its parent.
 The values may be normalized by this setter, shifting the node's translation
-and counter-shifting the start/end points. Therefore, the start/end getters may
+and counter-shifting the start/end points. Therefore, the start/end
+
+**`Proxy Api`**
+
+getters may
 return values different from the values you passed into this setter, even though
 the line's visual bounds and appearance are the same. Rotation is preserved.
 
@@ -877,34 +819,4 @@ Coordinates must be finite numbers.
 
 #### Defined in
 
-platform/authoring/api/src/LineNode.ts:87
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-[StrokableNode](StrokableNode.md).[canChangeParent](StrokableNode.md#canChangeParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82
+LineNode.ts:44

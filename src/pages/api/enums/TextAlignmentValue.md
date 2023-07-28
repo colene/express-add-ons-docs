@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / TextAlignmentValue
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / TextAlignmentValue
 
 # Enumeration: TextAlignmentValue
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:169
+support/HzScenegraphTypes.ts:130
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:167
+support/HzScenegraphTypes.ts:128
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:168
+support/HzScenegraphTypes.ts:129

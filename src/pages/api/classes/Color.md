@@ -1,16 +1,18 @@
-[ /authoring-api](../overview.md) / Color
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / Color
 
 # Class: Color
 
 Represents a color in one of any available RGB colorspaces.
 
+## Hierarchy
+
+- `ProxyLiveObject`
+
+  ↳ **`Color`**
+
 ## Table of contents
 
-### Constructors
-
-- [constructor](Color.md#constructor)
-
-### Properties
+### Accessors
 
 - [alpha](Color.md#alpha)
 - [blue](Color.md#blue)
@@ -21,91 +23,87 @@ Represents a color in one of any available RGB colorspaces.
 ### Methods
 
 - [getHex](Color.md#getHex)
-- [getIntegerComponents](Color.md#getIntegerComponents)
 - [createFromHex](Color.md#createFromHex)
 
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new Color**(`red`, `green`, `blue`, `alpha?`)
-
-Create a new Color. All color components should be in a 0 - 1 range. Non-finite
-values are treated as 0. Any values outside this range are clamped to within the
-range.
-
-#### Parameters
-
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `red` | `number` | `undefined` | The red component in a range from 0 - 1. |
-| `green` | `number` | `undefined` | The green component in a range from 0 - 1. |
-| `blue` | `number` | `undefined` | The blue component in a range from 0 - 1. |
-| `alpha` | `number` | `1` | (optional) The alpha component in a range from 0 - 1. |
-
-#### Defined in
-
-platform/authoring/api/src/Color.ts:69
-
-## Properties
+## Accessors
 
 ### <a id="alpha" name="alpha"></a> alpha
 
-• `Readonly` **alpha**: `number`
+• `get` **alpha**(): `number`
 
 The alpha channel in range from 0 - 1.
 
+#### Returns
+
+`number`
+
 #### Defined in
 
-platform/authoring/api/src/Color.ts:52
+Color.ts:59
 
 ___
 
 ### <a id="blue" name="blue"></a> blue
 
-• `Readonly` **blue**: `number`
+• `get` **blue**(): `number`
 
 The blue channel in range from 0 - 1.
 
+#### Returns
+
+`number`
+
 #### Defined in
 
-platform/authoring/api/src/Color.ts:47
+Color.ts:51
 
 ___
 
 ### <a id="colorSpace" name="colorSpace"></a> colorSpace
 
-• `Readonly` **colorSpace**: [`sRGB`](../enums/ColorSpace.md#sRGB) = `ColorSpace.sRGB`
+• `get` **colorSpace**(): `sRGB`
 
 This color's color space. Currently only sRGB is supported.
 
+#### Returns
+
+`sRGB`
+
 #### Defined in
 
-platform/authoring/api/src/Color.ts:57
+Color.ts:67
 
 ___
 
 ### <a id="green" name="green"></a> green
 
-• `Readonly` **green**: `number`
+• `get` **green**(): `number`
 
 The green channel in range from 0 - 1.
 
+#### Returns
+
+`number`
+
 #### Defined in
 
-platform/authoring/api/src/Color.ts:42
+Color.ts:43
 
 ___
 
 ### <a id="red" name="red"></a> red
 
-• `Readonly` **red**: `number`
+• `get` **red**(): `number`
 
 The red channel in range from 0 - 1.
 
+#### Returns
+
+`number`
+
 #### Defined in
 
-platform/authoring/api/src/Color.ts:37
+Color.ts:35
 
 ## Methods
 
@@ -123,28 +121,7 @@ conversion.
 
 #### Defined in
 
-platform/authoring/api/src/Color.ts:103
-
-___
-
-### <a id="getIntegerComponents" name="getIntegerComponents"></a> getIntegerComponents
-
-▸ **getIntegerComponents**(): `Object`
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `alpha` | `number` |
-| `blue` | `number` |
-| `green` | `number` |
-| `red` | `number` |
-
-#### Defined in
-
-platform/authoring/api/src/Color.ts:122
+Color.ts:102
 
 ___
 
@@ -171,4 +148,4 @@ the hex string cannot be parsed.
 
 #### Defined in
 
-platform/authoring/api/src/Color.ts:92
+Color.ts:92

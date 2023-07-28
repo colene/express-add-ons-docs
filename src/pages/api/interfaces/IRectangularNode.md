@@ -1,0 +1,37 @@
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / IRectangularNode
+
+# Interface: IRectangularNode
+
+Interface for nodes with width and height properties.
+
+## Implemented by
+
+- [`ArtboardNode`](../classes/ArtboardNode.md)
+- [`RectangleNode`](../classes/RectangleNode.md)
+
+## Table of contents
+
+### Properties
+
+- [height](IRectangularNode.md#height)
+- [width](IRectangularNode.md#width)
+
+## Properties
+
+### <a id="height" name="height"></a> height
+
+• **height**: `number`
+
+#### Defined in
+
+RectangleNode.ts:28
+
+___
+
+### <a id="width" name="width"></a> width
+
+• **width**: `number`
+
+#### Defined in
+
+RectangleNode.ts:27

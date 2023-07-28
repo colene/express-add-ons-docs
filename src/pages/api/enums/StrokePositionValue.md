@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / StrokePositionValue
+[@hz/add-on-hz-hlapi-sdk](../overview.md) / StrokePositionValue
 
 # Enumeration: StrokePositionValue
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:454
+support/HzScenegraphTypes.ts:94
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:455
+support/HzScenegraphTypes.ts:95
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-platform/authoring/scenegraph/scenegraph/dist/PersistedECSDefinitions.d.ts:456
+support/HzScenegraphTypes.ts:96
