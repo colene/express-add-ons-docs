@@ -4,11 +4,17 @@
 
 ## Table of contents
 
+### References
+
+- [ListSequenceGeneratorType](overview.md#ListSequenceGeneratorType)
+- [ParagraphDirection](overview.md#ParagraphDirection)
+
 ### Enumerations
 
 - [ArrowHeadType](enums/ArrowHeadType.md)
 - [BlendModeValue](enums/BlendModeValue.md)
 - [FillTypeValue](enums/FillTypeValue.md)
+- [FontSource](enums/FontSource.md)
 - [InternalListSequenceGeneratorType](enums/InternalListSequenceGeneratorType.md)
 - [InternalParagraphDirection](enums/InternalParagraphDirection.md)
 - [SceneNodeTypeValueID](enums/SceneNodeTypeValueID.md)
@@ -41,6 +47,7 @@
 - [BitmapImage](interfaces/BitmapImage.md)
 - [ColorFill](interfaces/ColorFill.md)
 - [Fill](interfaces/Fill.md)
+- [HzHLApiUtils](interfaces/HzHLApiUtils.md)
 - [IFillableNode](interfaces/IFillableNode.md)
 - [IRectangularNode](interfaces/IRectangularNode.md)
 - [InternalCharacterStyle](interfaces/InternalCharacterStyle.md)
@@ -52,6 +59,18 @@
 
 - [Entity](overview.md#Entity)
 - [FillTypeValueID](overview.md#FillTypeValueID)
+
+## References
+
+### <a id="ListSequenceGeneratorType" name="ListSequenceGeneratorType"></a> ListSequenceGeneratorType
+
+Renames and re-exports [InternalListSequenceGeneratorType](enums/InternalListSequenceGeneratorType.md)
+
+___
+
+### <a id="ParagraphDirection" name="ParagraphDirection"></a> ParagraphDirection
+
+Renames and re-exports [InternalParagraphDirection](enums/InternalParagraphDirection.md)
 
 ## Type Aliases
 
