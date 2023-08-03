@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / FillableNode
+[add-on-hlapi-sdk](../overview.md) / FillableNode
 
 # Class: FillableNode
 

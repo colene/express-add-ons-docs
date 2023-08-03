@@ -1,6 +1,6 @@
-@hz/add-on-hz-hlapi-sdk
+add-on-hlapi-sdk
 
-# @hz/add-on-hz-hlapi-sdk
+# add-on-hlapi-sdk
 
 ## Table of contents
 

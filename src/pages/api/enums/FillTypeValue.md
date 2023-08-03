@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / FillTypeValue
+[add-on-hlapi-sdk](../overview.md) / FillTypeValue
 
 # Enumeration: FillTypeValue
 

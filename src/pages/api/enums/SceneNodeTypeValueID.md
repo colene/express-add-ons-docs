@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
+[add-on-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
 
 # Enumeration: SceneNodeTypeValueID
 

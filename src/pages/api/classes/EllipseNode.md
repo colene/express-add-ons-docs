@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / EllipseNode
+[add-on-hlapi-sdk](../overview.md) / EllipseNode
 
 # Class: EllipseNode
 

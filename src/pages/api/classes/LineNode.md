@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / LineNode
+[add-on-hlapi-sdk](../overview.md) / LineNode
 
 # Class: LineNode
 

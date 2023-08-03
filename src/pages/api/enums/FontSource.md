@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / FontSource
+[add-on-hlapi-sdk](../overview.md) / FontSource
 
 # Enumeration: FontSource
 

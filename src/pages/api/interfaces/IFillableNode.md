@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / IFillableNode
+[add-on-hlapi-sdk](../overview.md) / IFillableNode
 
 # Interface: IFillableNode
 

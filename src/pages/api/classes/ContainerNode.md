@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / ContainerNode
+[add-on-hlapi-sdk](../overview.md) / ContainerNode
 
 # Class: ContainerNode
 

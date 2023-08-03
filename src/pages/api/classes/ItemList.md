@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / ItemList
+[add-on-hlapi-sdk](../overview.md) / ItemList
 
 # Class: ItemList<T\>
 

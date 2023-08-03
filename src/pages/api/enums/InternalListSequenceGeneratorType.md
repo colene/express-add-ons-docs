@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / InternalListSequenceGeneratorType
+[add-on-hlapi-sdk](../overview.md) / InternalListSequenceGeneratorType
 
 # Enumeration: InternalListSequenceGeneratorType
 

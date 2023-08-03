@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / MediaContainerNode
+[add-on-hlapi-sdk](../overview.md) / MediaContainerNode
 
 # Class: MediaContainerNode
 

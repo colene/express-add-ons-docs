@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / StrokePositionValue
+[add-on-hlapi-sdk](../overview.md) / StrokePositionValue
 
 # Enumeration: StrokePositionValue
 

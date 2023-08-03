@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / ParagraphStyleRangeList
+[add-on-hlapi-sdk](../overview.md) / ParagraphStyleRangeList
 
 # Class: ParagraphStyleRangeList
 

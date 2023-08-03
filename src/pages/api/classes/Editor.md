@@ -1,8 +1,8 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / Editor
+[add-on-hlapi-sdk](../overview.md) / Editor
 
 # Class: Editor<TenantRootNode\>
 
-Entry point for Horizon's high-level API.
+Entry point for Editor APIs.
 
 ## Type parameters
 
@@ -46,7 +46,6 @@ Entry point for Horizon's high-level API.
 
 • `get` **context**(): [`Context`](Context.md)
 
-[wxpAddOn]
 User's current selection context
 
 #### Returns
@@ -61,7 +60,7 @@ ___
 
 ### <a id="documentRoot" name="documentRoot"></a> documentRoot
 
-• `get` **documentRoot**(): `TenantRootNode`
+• `get` **documentRoot**(): [`ExpressRootNode`](ArtboardNode.md)
 
 #### Returns
 

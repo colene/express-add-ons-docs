@@ -1,4 +1,4 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / GroupNode
+[add-on-hlapi-sdk](../overview.md) / GroupNode
 
 # Class: GroupNode
 

@@ -1,14 +1,8 @@
-[@hz/add-on-hz-hlapi-sdk](../overview.md) / ArtboardNode
+[add-on-hlapi-sdk](../overview.md) / ArtboardNode
 
 # Class: ArtboardNode
 
-An ArtboardNode represents an artboard object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with artboards in ECS.
-
-**`Remarks`**
-
-Despite supporting the 'fills' list property, ArtboardNode does not extend FillableNode due to limitations
-on multiple inheritance.
+An ArtboardNode represents an artboard object in the scenegraph. This is the representation of the 'Scene' in Editor APIs.
 
 ## Hierarchy
 
