@@ -1,9 +1,8 @@
-[add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / Node
 
 # Class: Node
 
-A Node represents an object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph objects in ECS.
+A Node represents an object in the scenegraph.
 
 ## Hierarchy
 
@@ -11,13 +10,19 @@ wrapper around the low-level APIs for interacting with scene graph objects in EC
 
   ↳ **`Node`**
 
+  ↳↳ [`ContainerNode`](ContainerNode.md)
+
+  ↳↳ [`ImageRectangleNode`](ImageRectangleNode.md)
+
   ↳↳ [`MediaContainerNode`](MediaContainerNode.md)
+
+  ↳↳ [`PageNode`](PageNode.md)
+
+  ↳↳ [`StrokableNode`](StrokableNode.md)
 
   ↳↳ [`TextNode`](TextNode.md)
 
-  ↳↳ [`ContainerNode`](ContainerNode.md)
-
-  ↳↳ [`StrokableNode`](StrokableNode.md)
+  ↳↳ [`ExpressRootNode`](ExpressRootNode.md)
 
 ## Table of contents
 
@@ -27,8 +32,6 @@ wrapper around the low-level APIs for interacting with scene graph objects in EC
 - [absoluteTransform](Node.md#absoluteTransform)
 - [allChildren](Node.md#allChildren)
 - [blendMode](Node.md#blendMode)
-- [entity](Node.md#entity)
-- [locked](Node.md#locked)
 - [name](Node.md#name)
 - [opacity](Node.md#opacity)
 - [parent](Node.md#parent)
@@ -54,10 +57,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 `number`
 
-#### Defined in
-
-Node.ts:96
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,10 +68,6 @@ Node.ts:96
 #### Returns
 
 `void`
-
-#### Defined in
-
-Node.ts:101
 
 ___
 
@@ -86,26 +81,6 @@ The node's absolute (global) transform.
 
 `mat2d`
 
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-Node.ts:155
-
 ___
 
 ### <a id="allChildren" name="allChildren"></a> allChildren
@@ -113,16 +88,12 @@ ___
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
 Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
+a mutable [children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
 discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
 
 #### Returns
 
 `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -140,10 +111,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 [`BlendModeValue`](../enums/BlendModeValue.md)
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -155,58 +122,6 @@ Node.ts:190
 #### Returns
 
 `void`
-
-#### Defined in
-
-Node.ts:194
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-Node.ts:42
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-Node.ts:179
 
 ___
 
@@ -220,10 +135,6 @@ The node's name.
 
 `undefined` \| `string`
 
-#### Defined in
-
-Node.ts:162
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -235,10 +146,6 @@ Node.ts:162
 #### Returns
 
 `void`
-
-#### Defined in
-
-Node.ts:167
 
 ___
 
@@ -252,10 +159,6 @@ The node's opacity.
 
 `number`
 
-#### Defined in
-
-Node.ts:126
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -268,10 +171,6 @@ Node.ts:126
 
 `void`
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -283,10 +182,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](Node.md)
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -302,10 +197,6 @@ center, not its origin.
 
 `number`
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -317,10 +208,6 @@ Node.ts:84
 #### Returns
 
 `void`
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -334,26 +221,6 @@ The node's transform relative to its parent.
 
 `mat2d`
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -365,10 +232,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Returns
 
 `number`
-
-#### Defined in
-
-Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -382,10 +245,6 @@ Node.ts:58
 
 `void`
 
-#### Defined in
-
-Node.ts:63
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -397,10 +256,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Returns
 
 `number`
-
-#### Defined in
-
-Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -414,10 +269,6 @@ Node.ts:70
 
 `void`
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -429,10 +280,6 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
-
-#### Defined in
-
-Node.ts:50
 
 ## Methods
 
@@ -447,7 +294,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
-
-#### Defined in
-
-Node.ts:118

@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / Stroke
+[@add-on-hlapi-sdk](../overview.md) / Stroke
 
 # Interface: Stroke
 
@@ -17,7 +17,6 @@ Represents a stroke in the scene graph.
 - [color](Stroke.md#color)
 - [dashOffset](Stroke.md#dashOffset)
 - [dashPattern](Stroke.md#dashPattern)
-- [entity](Stroke.md#entity)
 - [position](Stroke.md#position)
 - [width](Stroke.md#width)
 
@@ -33,10 +32,6 @@ The color of a stroke.
 
 [StrokeOptions](StrokeOptions.md).[color](StrokeOptions.md#color)
 
-#### Defined in
-
-Stroke.ts:29
-
 ___
 
 ### <a id="dashOffset" name="dashOffset"></a> dashOffset
@@ -48,10 +43,6 @@ Number of pixels the beginning of dash pattern should be offset along the stroke
 #### Inherited from
 
 [StrokeOptions](StrokeOptions.md).[dashOffset](StrokeOptions.md#dashOffset)
-
-#### Defined in
-
-Stroke.ts:43
 
 ___
 
@@ -67,20 +58,6 @@ repeated along the length of the stroke. The first value represents the first so
 
 [StrokeOptions](StrokeOptions.md).[dashPattern](StrokeOptions.md#dashPattern)
 
-#### Defined in
-
-Stroke.ts:39
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `Readonly` **entity**: `string`
-
-#### Defined in
-
-Stroke.ts:50
-
 ___
 
 ### <a id="position" name="position"></a> position
@@ -89,10 +66,6 @@ ___
 
 The position of the stroke relative to the outline of a shape.
 Currently, only center position is supported for persisted strokes.
-
-#### Defined in
-
-Stroke.ts:56
 
 ___
 
@@ -105,7 +78,3 @@ The thickness of a stroke.
 #### Inherited from
 
 [StrokeOptions](StrokeOptions.md).[width](StrokeOptions.md#width)
-
-#### Defined in
-
-Stroke.ts:33

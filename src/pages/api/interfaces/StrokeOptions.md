@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / StrokeOptions
+[@add-on-hlapi-sdk](../overview.md) / StrokeOptions
 
 # Interface: StrokeOptions
 
@@ -27,10 +27,6 @@ Properties that can be provided to create a stroke.
 
 The color of a stroke.
 
-#### Defined in
-
-Stroke.ts:29
-
 ___
 
 ### <a id="dashOffset" name="dashOffset"></a> dashOffset
@@ -38,10 +34,6 @@ ___
 • `Readonly` **dashOffset**: `number`
 
 Number of pixels the beginning of dash pattern should be offset along the stroke.
-
-#### Defined in
-
-Stroke.ts:43
 
 ___
 
@@ -53,10 +45,6 @@ If empty, this is a solid stroke.
 If non-empty, the values alternate between length of a rendered and blank segment,
 repeated along the length of the stroke. The first value represents the first solid segment.
 
-#### Defined in
-
-Stroke.ts:39
-
 ___
 
 ### <a id="width" name="width"></a> width
@@ -64,7 +52,3 @@ ___
 • `Readonly` **width**: `number`
 
 The thickness of a stroke.
-
-#### Defined in
-
-Stroke.ts:33

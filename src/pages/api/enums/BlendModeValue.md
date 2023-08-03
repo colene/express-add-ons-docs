@@ -1,6 +1,11 @@
-[add-on-hlapi-sdk](../overview.md) / BlendModeValue
+[@add-on-hlapi-sdk](../overview.md) / BlendModeValue
 
 # Enumeration: BlendModeValue
+
+All blend modes are in "source-over" mode (Ported Duff compositing operators), i.e. the source will always be
+over the backdrop. More info on that can be found at https://drafts.fxtf.org/compositing-1/#blending.
+Currently we only support blending between scene nodes, but in the future we plan to have blending at the
+fill/stroke/shadow level, too.
 
 ## Table of contents
 
@@ -30,19 +35,11 @@
 
 • **color** = ``16``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:82
-
 ___
 
 ### <a id="colorBurn" name="colorBurn"></a> colorBurn
 
 • **colorBurn** = ``5``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:69
 
 ___
 
@@ -50,19 +47,11 @@ ___
 
 • **colorDodge** = ``8``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:72
-
 ___
 
 ### <a id="darken" name="darken"></a> darken
 
 • **darken** = ``4``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:68
 
 ___
 
@@ -70,19 +59,11 @@ ___
 
 • **difference** = ``12``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:76
-
 ___
 
 ### <a id="exclusion" name="exclusion"></a> exclusion
 
 • **exclusion** = ``13``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:77
 
 ___
 
@@ -90,19 +71,11 @@ ___
 
 • **hardLight** = ``11``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:75
-
 ___
 
 ### <a id="hue" name="hue"></a> hue
 
 • **hue** = ``14``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:80
 
 ___
 
@@ -110,19 +83,11 @@ ___
 
 • **lighten** = ``6``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:70
-
 ___
 
 ### <a id="luminosity" name="luminosity"></a> luminosity
 
 • **luminosity** = ``17``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:83
 
 ___
 
@@ -130,19 +95,11 @@ ___
 
 • **multiply** = ``3``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:67
-
 ___
 
 ### <a id="normal" name="normal"></a> normal
 
 • **normal** = ``2``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:66
 
 ___
 
@@ -150,19 +107,11 @@ ___
 
 • **overlay** = ``9``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:73
-
 ___
 
 ### <a id="passThrough" name="passThrough"></a> passThrough
 
 • **passThrough** = ``1``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:63
 
 ___
 
@@ -170,26 +119,14 @@ ___
 
 • **saturation** = ``15``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:81
-
 ___
 
 ### <a id="screen" name="screen"></a> screen
 
 • **screen** = ``7``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:71
-
 ___
 
 ### <a id="softLight" name="softLight"></a> softLight
 
 • **softLight** = ``10``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:74

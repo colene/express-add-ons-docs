@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / ArtboardNode
+[@add-on-hlapi-sdk](../overview.md) / ArtboardNode
 
 # Class: ArtboardNode
 
@@ -24,10 +24,8 @@ An ArtboardNode represents an artboard object in the scenegraph. This is the rep
 - [allChildren](ArtboardNode.md#allChildren)
 - [blendMode](ArtboardNode.md#blendMode)
 - [children](ArtboardNode.md#children)
-- [entity](ArtboardNode.md#entity)
 - [fills](ArtboardNode.md#fills)
 - [height](ArtboardNode.md#height)
-- [locked](ArtboardNode.md#locked)
 - [name](ArtboardNode.md#name)
 - [opacity](ArtboardNode.md#opacity)
 - [parent](ArtboardNode.md#parent)
@@ -59,10 +57,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:96
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -79,10 +73,6 @@ Node.ts:96
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -98,30 +88,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 ContainerNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -140,10 +106,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 ContainerNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -165,10 +127,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 ContainerNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -184,10 +142,6 @@ Node.ts:190
 #### Inherited from
 
 ContainerNode.blendMode
-
-#### Defined in
-
-Node.ts:194
 
 ___
 
@@ -205,30 +159,6 @@ The node's children. Use the methods on this ItemList object to get, add, and re
 
 ContainerNode.children
 
-#### Defined in
-
-ContainerNode.ts:32
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-ContainerNode.entity
-
-#### Defined in
-
-Node.ts:42
-
 ___
 
 ### <a id="fills" name="fills"></a> fills
@@ -245,10 +175,6 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 [IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
 
-#### Defined in
-
-ArtboardNode.ts:62
-
 ___
 
 ### <a id="height" name="height"></a> height
@@ -256,7 +182,6 @@ ___
 • `get` **height**(): `number`
 
 The height of the node.
-Must be at least MIN_DIMENSION.
 
 #### Returns
 
@@ -265,70 +190,6 @@ Must be at least MIN_DIMENSION.
 #### Implementation of
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
-
-#### Defined in
-
-ArtboardNode.ts:51
-
-• `set` **height**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-[IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
-
-#### Defined in
-
-ArtboardNode.ts:55
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-Node.ts:179
 
 ___
 
@@ -346,10 +207,6 @@ The node's name.
 
 ContainerNode.name
 
-#### Defined in
-
-Node.ts:162
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -365,10 +222,6 @@ Node.ts:162
 #### Inherited from
 
 ContainerNode.name
-
-#### Defined in
-
-Node.ts:167
 
 ___
 
@@ -386,10 +239,6 @@ The node's opacity.
 
 ContainerNode.opacity
 
-#### Defined in
-
-Node.ts:126
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -406,29 +255,22 @@ Node.ts:126
 
 ContainerNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
 
-• `get` **parent**(): `undefined` \| [`Node`](Node.md)
+• `get` **parent**(): `undefined` \| [`PageNode`](PageNode.md)
 
-The node's parent. Undefined if the node is an orphan, or if the node is the artwork root.
+The node's parent. Returns the wrapper PageNode (TemporalArtboardContainer) rather than
+the TemporalArtboardContainerMain which is hidden by the HLAPI.
 
 #### Returns
 
-`undefined` \| [`Node`](Node.md)
+`undefined` \| [`PageNode`](PageNode.md)
 
-#### Inherited from
+#### Overrides
 
 ContainerNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -448,10 +290,6 @@ center, not its origin.
 
 ContainerNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -467,10 +305,6 @@ Node.ts:84
 #### Inherited from
 
 ContainerNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -488,30 +322,6 @@ The node's transform relative to its parent.
 
 ContainerNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="strokes" name="strokes"></a> strokes
@@ -523,10 +333,6 @@ Any strokes(s) on the shape. Use the methods on this ItemList object to get, add
 #### Returns
 
 [`ItemList`](ItemList.md)<[`Stroke`](../interfaces/Stroke.md)\>
-
-#### Defined in
-
-ArtboardNode.ts:70
 
 ___
 
@@ -544,10 +350,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 ContainerNode.translateX
 
-#### Defined in
-
-Node.ts:58
-
 • `set` **translateX**(`value`): `void`
 
 #### Parameters
@@ -563,10 +365,6 @@ Node.ts:58
 #### Inherited from
 
 ContainerNode.translateX
-
-#### Defined in
-
-Node.ts:63
 
 ___
 
@@ -584,10 +382,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 ContainerNode.translateY
 
-#### Defined in
-
-Node.ts:70
-
 • `set` **translateY**(`value`): `void`
 
 #### Parameters
@@ -603,10 +397,6 @@ Node.ts:70
 #### Inherited from
 
 ContainerNode.translateY
-
-#### Defined in
-
-Node.ts:75
 
 ___
 
@@ -624,10 +414,6 @@ The node's type.
 
 ContainerNode.type
 
-#### Defined in
-
-Node.ts:50
-
 ___
 
 ### <a id="width" name="width"></a> width
@@ -635,7 +421,6 @@ ___
 • `get` **width**(): `number`
 
 The width of the node.
-Must be at least MIN_DIMENSION.
 
 #### Returns
 
@@ -644,30 +429,6 @@ Must be at least MIN_DIMENSION.
 #### Implementation of
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
-
-#### Defined in
-
-ArtboardNode.ts:41
-
-• `set` **width**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-[IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
-
-#### Defined in
-
-ArtboardNode.ts:45
 
 ## Methods
 
@@ -686,7 +447,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [ContainerNode](ContainerNode.md).[removeFromParent](ContainerNode.md#removeFromParent)
-
-#### Defined in
-
-Node.ts:118

@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / FontSource
+[@add-on-hlapi-sdk](../overview.md) / FontSource
 
 # Enumeration: FontSource
 
@@ -16,26 +16,14 @@
 
 • **AF** = ``"AF"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:151
-
 ___
 
 ### <a id="BYOF" name="BYOF"></a> BYOF
 
 • **BYOF** = ``"BYOF"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:152
-
 ___
 
 ### <a id="unknown" name="unknown"></a> unknown
 
 • **unknown** = ``"unknown"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:150

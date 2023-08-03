@@ -1,9 +1,8 @@
-[add-on-hlapi-sdk](../overview.md) / GroupNode
+[@add-on-hlapi-sdk](../overview.md) / GroupNode
 
 # Class: GroupNode
 
-A GroupNode represents a group object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph group objects in ECS.
+A GroupNode represents a group object in the scenegraph.
 
 ## Hierarchy
 
@@ -20,8 +19,6 @@ wrapper around the low-level APIs for interacting with scene graph group objects
 - [allChildren](GroupNode.md#allChildren)
 - [blendMode](GroupNode.md#blendMode)
 - [children](GroupNode.md#children)
-- [entity](GroupNode.md#entity)
-- [locked](GroupNode.md#locked)
 - [maskShape](GroupNode.md#maskShape)
 - [name](GroupNode.md#name)
 - [opacity](GroupNode.md#opacity)
@@ -52,10 +49,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:96
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -72,10 +65,6 @@ Node.ts:96
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -91,30 +80,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 ContainerNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -133,10 +98,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 ContainerNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -158,10 +119,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 ContainerNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -177,10 +134,6 @@ Node.ts:190
 #### Inherited from
 
 ContainerNode.blendMode
-
-#### Defined in
-
-Node.ts:194
 
 ___
 
@@ -198,70 +151,6 @@ The node's children. Use the methods on this ItemList object to get, add, and re
 
 ContainerNode.children
 
-#### Defined in
-
-ContainerNode.ts:32
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-ContainerNode.entity
-
-#### Defined in
-
-Node.ts:42
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-Node.ts:179
-
 ___
 
 ### <a id="maskShape" name="maskShape"></a> maskShape
@@ -275,10 +164,6 @@ The mask node in the group.
 `undefined` \| [`FillableNode`](FillableNode.md)
 
 undefined if no mask is found.
-
-#### Defined in
-
-GroupNode.ts:33
 
 • `set` **maskShape**(`mask`): `void`
 
@@ -298,10 +183,6 @@ if the given node type cannot be used as a vector mask.
 
 `void`
 
-#### Defined in
-
-GroupNode.ts:42
-
 ___
 
 ### <a id="name" name="name"></a> name
@@ -317,10 +198,6 @@ The node's name.
 #### Inherited from
 
 ContainerNode.name
-
-#### Defined in
-
-Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -338,10 +215,6 @@ Node.ts:162
 
 ContainerNode.name
 
-#### Defined in
-
-Node.ts:167
-
 ___
 
 ### <a id="opacity" name="opacity"></a> opacity
@@ -357,10 +230,6 @@ The node's opacity.
 #### Inherited from
 
 ContainerNode.opacity
-
-#### Defined in
-
-Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -378,10 +247,6 @@ Node.ts:126
 
 ContainerNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -397,10 +262,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 ContainerNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -420,10 +281,6 @@ center, not its origin.
 
 ContainerNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -439,10 +296,6 @@ Node.ts:84
 #### Inherited from
 
 ContainerNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -460,30 +313,6 @@ The node's transform relative to its parent.
 
 ContainerNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -499,10 +328,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Inherited from
 
 ContainerNode.translateX
-
-#### Defined in
-
-Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -520,10 +345,6 @@ Node.ts:58
 
 ContainerNode.translateX
 
-#### Defined in
-
-Node.ts:63
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -539,10 +360,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Inherited from
 
 ContainerNode.translateY
-
-#### Defined in
-
-Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -560,10 +377,6 @@ Node.ts:70
 
 ContainerNode.translateY
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -579,10 +392,6 @@ The node's type.
 #### Inherited from
 
 ContainerNode.type
-
-#### Defined in
-
-Node.ts:50
 
 ## Methods
 
@@ -601,7 +410,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [ContainerNode](ContainerNode.md).[removeFromParent](ContainerNode.md#removeFromParent)
-
-#### Defined in
-
-Node.ts:118

@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / ParagraphStyleRangeList
+[@add-on-hlapi-sdk](../overview.md) / ParagraphStyleRangeList
 
 # Class: ParagraphStyleRangeList
 
@@ -6,7 +6,7 @@ Represents a list of paragraph style ranges.
 
 ## Hierarchy
 
-- `StyleRangeList`<`RangedParagraphStyle`\>
+- [`StyleRangeList`](StyleRangeList.md)<`RangedParagraphStyle`\>
 
   ↳ **`ParagraphStyleRangeList`**
 
@@ -36,8 +36,4 @@ Sets paragraph style from a character range (length).
 
 #### Overrides
 
-StyleRangeList.setStyleRanges
-
-#### Defined in
-
-ParagraphStyles.ts:128
+[StyleRangeList](StyleRangeList.md).[setStyleRanges](StyleRangeList.md#setStyleRanges)

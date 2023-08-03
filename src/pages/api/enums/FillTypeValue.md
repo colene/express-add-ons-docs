@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / FillTypeValue
+[@add-on-hlapi-sdk](../overview.md) / FillTypeValue
 
 # Enumeration: FillTypeValue
 
@@ -16,26 +16,14 @@
 
 • **bitmap** = ``"Bitmap"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:100
-
 ___
 
 ### <a id="color" name="color"></a> color
 
 • **color** = ``"Color"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:101
-
 ___
 
 ### <a id="video" name="video"></a> video
 
 • **video** = ``"Video"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:102

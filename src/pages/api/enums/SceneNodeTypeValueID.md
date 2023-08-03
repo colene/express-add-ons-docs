@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
+[@add-on-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
 
 # Enumeration: SceneNodeTypeValueID
 
@@ -29,19 +29,11 @@
 
 • **artboard** = ``"ab:Artboard"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:38
-
 ___
 
 ### <a id="artworkRoot" name="artworkRoot"></a> artworkRoot
 
 • **artworkRoot** = ``"ArtworkRoot"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:44
 
 ___
 
@@ -49,19 +41,11 @@ ___
 
 • **ellipse** = ``"Ellipse"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:33
-
 ___
 
 ### <a id="group" name="group"></a> group
 
 • **group** = ``"Group"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:37
 
 ___
 
@@ -71,29 +55,17 @@ ___
 
 Type of MediaContainerNode's "media rectangle" child when it is holding an image
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:50
-
 ___
 
 ### <a id="line" name="line"></a> line
 
 • **line** = ``"Line"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:31
-
 ___
 
 ### <a id="linkedAsset" name="linkedAsset"></a> linkedAsset
 
 • **linkedAsset** = ``"LinkedAsset"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:36
 
 ___
 
@@ -103,19 +75,11 @@ ___
 
 Type of MediaContainerNode, representing the top-level Group of a CropGroup construct
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:47
-
 ___
 
 ### <a id="path" name="path"></a> path
 
 • **path** = ``"Path"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:34
 
 ___
 
@@ -123,19 +87,11 @@ ___
 
 • **polygon** = ``"artgr:Polygon"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:41
-
 ___
 
 ### <a id="rectangle" name="rectangle"></a> rectangle
 
 • **rectangle** = ``"Rectangle"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:32
 
 ___
 
@@ -143,19 +99,11 @@ ___
 
 • **stickyNote** = ``"StickyNote"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:39
-
 ___
 
 ### <a id="text" name="text"></a> text
 
 • **text** = ``"Text"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:35
 
 ___
 
@@ -163,26 +111,14 @@ ___
 
 • **variantSet** = ``"var:VariantSet"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:42
-
 ___
 
 ### <a id="webLink" name="webLink"></a> webLink
 
 • **webLink** = ``"WebLink"``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:43
-
 ___
 
 ### <a id="widget" name="widget"></a> widget
 
 • **widget** = ``"wdgt:Widget"``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:40

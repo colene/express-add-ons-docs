@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / StrokePositionValue
+[@add-on-hlapi-sdk](../overview.md) / StrokePositionValue
 
 # Enumeration: StrokePositionValue
 
@@ -16,26 +16,14 @@
 
 • **center** = ``0``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:94
-
 ___
 
 ### <a id="inside" name="inside"></a> inside
 
 • **inside** = ``1``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:95
-
 ___
 
 ### <a id="outside" name="outside"></a> outside
 
 • **outside** = ``2``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:96

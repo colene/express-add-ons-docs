@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / InternalParagraphDirection
+[@add-on-hlapi-sdk](../overview.md) / InternalParagraphDirection
 
 # Enumeration: InternalParagraphDirection
 
@@ -15,16 +15,8 @@
 
 • **leftToRight** = ``0``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:236
-
 ___
 
 ### <a id="rightToLeft" name="rightToLeft"></a> rightToLeft
 
 • **rightToLeft** = ``1``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:237

@@ -1,41 +1,43 @@
-[@add-on-hlapi-sdk](../overview.md) / ContainerNode
+[@add-on-hlapi-sdk](../overview.md) / ImageRectangleNode
 
-# Class: ContainerNode
+# Class: ImageRectangleNode
 
-Base class for a Node contains an entirely generic collection of children. (Other node classes may also hold children
-in more rigid "slots" - use $[allChildren](Node.md#allChildren) for read access to children agnostic of node type).
+ImageRectangleNode is a rectangular node that displays the image media part of a MediaContainerNode. It can only exist
+within that container parent. Cropping can be adjusted by changing this media's position/rotation (as well as its mask
+shape sibling node).
 
 ## Hierarchy
 
 - [`Node`](Node.md)
 
-  ↳ **`ContainerNode`**
+  ↳ **`ImageRectangleNode`**
 
-  ↳↳ [`ArtboardNode`](ArtboardNode.md)
+## Implements
 
-  ↳↳ [`GroupNode`](GroupNode.md)
+- `Readonly`<[`IRectangularNode`](../interfaces/IRectangularNode.md)\>
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](ContainerNode.md#absoluteRotation)
-- [absoluteTransform](ContainerNode.md#absoluteTransform)
-- [allChildren](ContainerNode.md#allChildren)
-- [blendMode](ContainerNode.md#blendMode)
-- [children](ContainerNode.md#children)
-- [name](ContainerNode.md#name)
-- [opacity](ContainerNode.md#opacity)
-- [parent](ContainerNode.md#parent)
-- [relativeRotation](ContainerNode.md#relativeRotation)
-- [relativeTransform](ContainerNode.md#relativeTransform)
-- [translateX](ContainerNode.md#translateX)
-- [translateY](ContainerNode.md#translateY)
-- [type](ContainerNode.md#type)
+- [absoluteRotation](ImageRectangleNode.md#absoluteRotation)
+- [absoluteTransform](ImageRectangleNode.md#absoluteTransform)
+- [allChildren](ImageRectangleNode.md#allChildren)
+- [blendMode](ImageRectangleNode.md#blendMode)
+- [height](ImageRectangleNode.md#height)
+- [name](ImageRectangleNode.md#name)
+- [opacity](ImageRectangleNode.md#opacity)
+- [parent](ImageRectangleNode.md#parent)
+- [relativeRotation](ImageRectangleNode.md#relativeRotation)
+- [relativeTransform](ImageRectangleNode.md#relativeTransform)
+- [translateX](ImageRectangleNode.md#translateX)
+- [translateY](ImageRectangleNode.md#translateY)
+- [type](ImageRectangleNode.md#type)
+- [width](ImageRectangleNode.md#width)
 
 ### Methods
 
-- [removeFromParent](ContainerNode.md#removeFromParent)
+- [removeFromParent](ImageRectangleNode.md#removeFromParent)
 
 ## Accessors
 
@@ -141,15 +143,21 @@ Node.blendMode
 
 ___
 
-### <a id="children" name="children"></a> children
+### <a id="height" name="height"></a> height
 
-• `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+• `get` **height**(): `number`
 
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
+Current height of the "full frame" image rectangle, which may not be fully visible due to cropping/clipping by the
+enclosing media container's maskShape. This size may be different from the original bitmap's size, but will always
+match its aspect ratio.
 
 #### Returns
 
-[`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+`number`
+
+#### Implementation of
+
+Readonly.height
 
 ___
 
@@ -360,6 +368,24 @@ The node's type.
 #### Inherited from
 
 Node.type
+
+___
+
+### <a id="width" name="width"></a> width
+
+• `get` **width**(): `number`
+
+Current width of the "full frame" image rectangle, which may not be fully visible due to cropping/clipping by the
+enclosing media container's maskShape. This size may be different from the original bitmap's size, but will always
+match its aspect ratio.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.width
 
 ## Methods
 

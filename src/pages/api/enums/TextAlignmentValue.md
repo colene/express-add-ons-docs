@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / TextAlignmentValue
+[@add-on-hlapi-sdk](../overview.md) / TextAlignmentValue
 
 # Enumeration: TextAlignmentValue
 
@@ -16,26 +16,14 @@
 
 • **center** = ``3``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:130
-
 ___
 
 ### <a id="left" name="left"></a> left
 
 • **left** = ``1``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:128
-
 ___
 
 ### <a id="right" name="right"></a> right
 
 • **right** = ``2``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:129

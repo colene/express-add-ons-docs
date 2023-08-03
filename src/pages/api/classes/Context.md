@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / Context
+[@add-on-hlapi-sdk](../overview.md) / Context
 
 # Class: Context
 
@@ -30,25 +30,17 @@ Contains the user's current selection state, indicating the content they are foc
 
 false if the current editable selection does not contain any nodes, otherwise true.
 
-#### Defined in
-
-Context.ts:38
-
 ___
 
 ### <a id="insertionParent" name="insertionParent"></a> insertionParent
 
-• `get` **insertionParent**(): [`Node`](Node.md)
+• `get` **insertionParent**(): [`ContainerNode`](ContainerNode.md)
 
 #### Returns
 
-[`Node`](Node.md)
+[`ContainerNode`](ContainerNode.md)
 
-the parent to insert newly added content into.
-
-#### Defined in
-
-Context.ts:46
+the preferred parent to insert newly added content into.
 
 ___
 
@@ -61,7 +53,3 @@ ___
 readonly [`Node`](Node.md)[]
 
 the current selection.
-
-#### Defined in
-
-Context.ts:30

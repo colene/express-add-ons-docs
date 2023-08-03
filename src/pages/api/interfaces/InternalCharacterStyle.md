@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / InternalCharacterStyle
+[@add-on-hlapi-sdk](../overview.md) / InternalCharacterStyle
 
 # Interface: InternalCharacterStyle
 
@@ -22,19 +22,11 @@
 
 • **assigned**: `number`
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:170
-
 ___
 
 ### <a id="color" name="color"></a> color
 
 • **color**: `ColorComponents`
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:174
 
 ___
 
@@ -42,19 +34,11 @@ ___
 
 • **features**: `DocModelArray`<`TextFeature`\>
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:178
-
 ___
 
 ### <a id="font" name="font"></a> font
 
 • **font**: `FontId`
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:171
 
 ___
 
@@ -62,19 +46,11 @@ ___
 
 • **fontSize**: `number`
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:173
-
 ___
 
 ### <a id="originalFont" name="originalFont"></a> originalFont
 
 • **originalFont**: `FontId`
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:172
 
 ___
 
@@ -82,26 +58,14 @@ ___
 
 • **strikethrough**: `boolean`
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:175
-
 ___
 
 ### <a id="tracking" name="tracking"></a> tracking
 
 • **tracking**: `number`
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:176
-
 ___
 
 ### <a id="underline" name="underline"></a> underline
 
 • **underline**: `boolean`
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:177

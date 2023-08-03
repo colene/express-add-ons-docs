@@ -1,9 +1,8 @@
-[add-on-hlapi-sdk](../overview.md) / LineNode
+[@add-on-hlapi-sdk](../overview.md) / LineNode
 
 # Class: LineNode
 
-A LineNode represents a line object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph line objects in ECS.
+A LineNode represents a line object in the scenegraph.
 
 ## Hierarchy
 
@@ -30,8 +29,6 @@ wrapper around the low-level APIs for interacting with scene graph line objects 
 - [endArrowHeadType](LineNode.md#endArrowHeadType)
 - [endX](LineNode.md#endX)
 - [endY](LineNode.md#endY)
-- [entity](LineNode.md#entity)
-- [locked](LineNode.md#locked)
 - [name](LineNode.md#name)
 - [opacity](LineNode.md#opacity)
 - [parent](LineNode.md#parent)
@@ -56,19 +53,11 @@ wrapper around the low-level APIs for interacting with scene graph line objects 
 
 ▪ `Static` `Readonly` **DEFAULT\_END\_X**: ``100``
 
-#### Defined in
-
-LineNode.ts:31
-
 ___
 
 ### <a id="DEFAULT_END_Y" name="DEFAULT_END_Y"></a> DEFAULT\_END\_Y
 
 ▪ `Static` `Readonly` **DEFAULT\_END\_Y**: ``100``
-
-#### Defined in
-
-LineNode.ts:32
 
 ___
 
@@ -76,19 +65,11 @@ ___
 
 ▪ `Static` `Readonly` **DEFAULT\_START\_X**: ``0``
 
-#### Defined in
-
-LineNode.ts:29
-
 ___
 
 ### <a id="DEFAULT_START_Y" name="DEFAULT_START_Y"></a> DEFAULT\_START\_Y
 
 ▪ `Static` `Readonly` **DEFAULT\_START\_Y**: ``0``
-
-#### Defined in
-
-LineNode.ts:30
 
 ___
 
@@ -99,10 +80,6 @@ ___
 #### Inherited from
 
 [StrokableNode](StrokableNode.md).[DEFAULT_STROKE_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
-
-#### Defined in
-
-StrokableNode.ts:36
 
 ## Accessors
 
@@ -120,10 +97,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 StrokableNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:96
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -140,10 +113,6 @@ Node.ts:96
 
 StrokableNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -159,30 +128,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 StrokableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -201,10 +146,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 StrokableNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -226,10 +167,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 StrokableNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -246,10 +183,6 @@ Node.ts:190
 
 StrokableNode.blendMode
 
-#### Defined in
-
-Node.ts:194
-
 ___
 
 ### <a id="endArrowHeadType" name="endArrowHeadType"></a> endArrowHeadType
@@ -260,20 +193,12 @@ The shape encapsulating the end of a line. The size and color of the arrowhead
 depends on the first available stroke's weight and color assigned to the node.
 Removal of all strokes on this line leads to the arrowhead's removal.
 
-The
-
-**`Proxy Api`**
-
-getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
+The getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
 or no arrowhead on the first stroke of the line.
 
 #### Returns
 
 [`ArrowHeadType`](../enums/ArrowHeadType.md)
-
-#### Defined in
-
-LineNode.ts:118
 
 • `set` **endArrowHeadType**(`type`): `void`
 
@@ -290,10 +215,6 @@ and updates the arrowhead on only the first stroke of the line.
 
 `void`
 
-#### Defined in
-
-LineNode.ts:126
-
 ___
 
 ### <a id="endX" name="endX"></a> endX
@@ -306,10 +227,6 @@ The end point on the x-axis in the parent's coordinate system.
 
 `number`
 
-#### Defined in
-
-LineNode.ts:75
-
 ___
 
 ### <a id="endY" name="endY"></a> endY
@@ -321,70 +238,6 @@ The end point on the y-axis in the parent's coordinate system.
 #### Returns
 
 `number`
-
-#### Defined in
-
-LineNode.ts:83
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-StrokableNode.entity
-
-#### Defined in
-
-Node.ts:42
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-StrokableNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.locked
-
-#### Defined in
-
-Node.ts:179
 
 ___
 
@@ -402,10 +255,6 @@ The node's name.
 
 StrokableNode.name
 
-#### Defined in
-
-Node.ts:162
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -421,10 +270,6 @@ Node.ts:162
 #### Inherited from
 
 StrokableNode.name
-
-#### Defined in
-
-Node.ts:167
 
 ___
 
@@ -442,10 +287,6 @@ The node's opacity.
 
 StrokableNode.opacity
 
-#### Defined in
-
-Node.ts:126
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -462,10 +303,6 @@ Node.ts:126
 
 StrokableNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -481,10 +318,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 StrokableNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -504,10 +337,6 @@ center, not its origin.
 
 StrokableNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -523,10 +352,6 @@ Node.ts:84
 #### Inherited from
 
 StrokableNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -544,30 +369,6 @@ The node's transform relative to its parent.
 
 StrokableNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="startArrowHeadType" name="startArrowHeadType"></a> startArrowHeadType
@@ -578,20 +379,12 @@ The shape encapsulating the start of a line. The size and color of the arrowhead
 depends on the first available stroke's weight and color assigned to the node.
 Removal of all strokes on this line leads to the arrowhead's removal.
 
-The
-
-**`Proxy Api`**
-
-getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
+The getter returns [none](../enums/ArrowHeadType.md#none) when there are no strokes on the line
 or no arrowhead on the first stroke of the line.
 
 #### Returns
 
 [`ArrowHeadType`](../enums/ArrowHeadType.md)
-
-#### Defined in
-
-LineNode.ts:97
 
 • `set` **startArrowHeadType**(`type`): `void`
 
@@ -608,10 +401,6 @@ and updates the arrowhead on only the first stroke of the line.
 
 `void`
 
-#### Defined in
-
-LineNode.ts:105
-
 ___
 
 ### <a id="startX" name="startX"></a> startX
@@ -624,10 +413,6 @@ The start point on the x-axis in the parent's coordinate system.
 
 `number`
 
-#### Defined in
-
-LineNode.ts:59
-
 ___
 
 ### <a id="startY" name="startY"></a> startY
@@ -639,10 +424,6 @@ The start point on the y-axis in the parent's coordinate system.
 #### Returns
 
 `number`
-
-#### Defined in
-
-LineNode.ts:67
 
 ___
 
@@ -660,10 +441,6 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 
 StrokableNode.strokes
 
-#### Defined in
-
-StrokableNode.ts:41
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -679,10 +456,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Inherited from
 
 StrokableNode.translateX
-
-#### Defined in
-
-Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -700,10 +473,6 @@ Node.ts:58
 
 StrokableNode.translateX
 
-#### Defined in
-
-Node.ts:63
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -719,10 +488,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Inherited from
 
 StrokableNode.translateY
-
-#### Defined in
-
-Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -740,10 +505,6 @@ Node.ts:70
 
 StrokableNode.translateY
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -759,10 +520,6 @@ The node's type.
 #### Inherited from
 
 StrokableNode.type
-
-#### Defined in
-
-Node.ts:50
 
 ## Methods
 
@@ -782,10 +539,6 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 [StrokableNode](StrokableNode.md).[removeFromParent](StrokableNode.md#removeFromParent)
 
-#### Defined in
-
-Node.ts:118
-
 ___
 
 ### <a id="setEndPoints" name="setEndPoints"></a> setEndPoints
@@ -794,11 +547,7 @@ ___
 
 Set the start and end points of the line in the coordinate space of its parent.
 The values may be normalized by this setter, shifting the node's translation
-and counter-shifting the start/end points. Therefore, the start/end
-
-**`Proxy Api`**
-
-getters may
+and counter-shifting the start/end points. Therefore, the start/end getters may
 return values different from the values you passed into this setter, even though
 the line's visual bounds and appearance are the same. Rotation is preserved.
 
@@ -816,7 +565,3 @@ Coordinates must be finite numbers.
 #### Returns
 
 `void`
-
-#### Defined in
-
-LineNode.ts:44

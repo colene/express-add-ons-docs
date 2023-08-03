@@ -1,9 +1,8 @@
-[add-on-hlapi-sdk](../overview.md) / RectangleNode
+[@add-on-hlapi-sdk](../overview.md) / RectangleNode
 
 # Class: RectangleNode
 
-A RectangleNode represents a rectangle object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph rectangle objects in ECS.
+A RectangleNode represents a rectangle object in the scenegraph.
 
 ## Hierarchy
 
@@ -29,10 +28,8 @@ wrapper around the low-level APIs for interacting with scene graph rectangle obj
 - [blendMode](RectangleNode.md#blendMode)
 - [bottomLeftRadius](RectangleNode.md#bottomLeftRadius)
 - [bottomRightRadius](RectangleNode.md#bottomRightRadius)
-- [entity](RectangleNode.md#entity)
 - [fills](RectangleNode.md#fills)
 - [height](RectangleNode.md#height)
-- [locked](RectangleNode.md#locked)
 - [name](RectangleNode.md#name)
 - [opacity](RectangleNode.md#opacity)
 - [parent](RectangleNode.md#parent)
@@ -62,10 +59,6 @@ wrapper around the low-level APIs for interacting with scene graph rectangle obj
 
 [FillableNode](FillableNode.md).[DEFAULT_STROKE_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
 
-#### Defined in
-
-StrokableNode.ts:36
-
 ## Accessors
 
 ### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
@@ -81,10 +74,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 #### Inherited from
 
 FillableNode.absoluteRotation
-
-#### Defined in
-
-Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -102,10 +91,6 @@ Node.ts:96
 
 FillableNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -121,30 +106,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 FillableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -163,10 +124,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 FillableNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -188,10 +145,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 FillableNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -208,10 +161,6 @@ Node.ts:190
 
 FillableNode.blendMode
 
-#### Defined in
-
-Node.ts:194
-
 ___
 
 ### <a id="bottomLeftRadius" name="bottomLeftRadius"></a> bottomLeftRadius
@@ -223,10 +172,6 @@ The radius of the bottom left corner.
 #### Returns
 
 `number`
-
-#### Defined in
-
-RectangleNode.ts:122
 
 • `set` **bottomLeftRadius**(`value`): `void`
 
@@ -247,10 +192,6 @@ even if the radius value set here is higher.
 
 `void`
 
-#### Defined in
-
-RectangleNode.ts:134
-
 ___
 
 ### <a id="bottomRightRadius" name="bottomRightRadius"></a> bottomRightRadius
@@ -262,10 +203,6 @@ The radius of the bottom right corner.
 #### Returns
 
 `number`
-
-#### Defined in
-
-RectangleNode.ts:103
 
 • `set` **bottomRightRadius**(`value`): `void`
 
@@ -286,30 +223,6 @@ even if the radius value set here is higher.
 
 `void`
 
-#### Defined in
-
-RectangleNode.ts:115
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-FillableNode.entity
-
-#### Defined in
-
-Node.ts:42
-
 ___
 
 ### <a id="fills" name="fills"></a> fills
@@ -325,10 +238,6 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 #### Inherited from
 
 FillableNode.fills
-
-#### Defined in
-
-FillableNode.ts:39
 
 ___
 
@@ -347,10 +256,6 @@ Must be at least MIN_DIMENSION.
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
 
-#### Defined in
-
-RectangleNode.ts:53
-
 • `set` **height**(`value`): `void`
 
 #### Parameters
@@ -366,50 +271,6 @@ RectangleNode.ts:53
 #### Implementation of
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
-
-#### Defined in
-
-RectangleNode.ts:58
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-FillableNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.locked
-
-#### Defined in
-
-Node.ts:179
 
 ___
 
@@ -427,10 +288,6 @@ The node's name.
 
 FillableNode.name
 
-#### Defined in
-
-Node.ts:162
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -446,10 +303,6 @@ Node.ts:162
 #### Inherited from
 
 FillableNode.name
-
-#### Defined in
-
-Node.ts:167
 
 ___
 
@@ -467,10 +320,6 @@ The node's opacity.
 
 FillableNode.opacity
 
-#### Defined in
-
-Node.ts:126
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -487,10 +336,6 @@ Node.ts:126
 
 FillableNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -506,10 +351,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 FillableNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -529,10 +370,6 @@ center, not its origin.
 
 FillableNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -548,10 +385,6 @@ Node.ts:84
 #### Inherited from
 
 FillableNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -569,30 +402,6 @@ The node's transform relative to its parent.
 
 FillableNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="strokes" name="strokes"></a> strokes
@@ -609,10 +418,6 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 
 FillableNode.strokes
 
-#### Defined in
-
-StrokableNode.ts:41
-
 ___
 
 ### <a id="topLeftRadius" name="topLeftRadius"></a> topLeftRadius
@@ -624,10 +429,6 @@ The radius of the top left corner.
 #### Returns
 
 `number`
-
-#### Defined in
-
-RectangleNode.ts:65
 
 • `set` **topLeftRadius**(`value`): `void`
 
@@ -648,10 +449,6 @@ even if the radius value set here is higher.
 
 `void`
 
-#### Defined in
-
-RectangleNode.ts:77
-
 ___
 
 ### <a id="topRightRadius" name="topRightRadius"></a> topRightRadius
@@ -663,10 +460,6 @@ The radius of the top right corner.
 #### Returns
 
 `number`
-
-#### Defined in
-
-RectangleNode.ts:84
 
 • `set` **topRightRadius**(`value`): `void`
 
@@ -687,10 +480,6 @@ even if the radius value set here is higher.
 
 `void`
 
-#### Defined in
-
-RectangleNode.ts:96
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -706,10 +495,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Inherited from
 
 FillableNode.translateX
-
-#### Defined in
-
-Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -727,10 +512,6 @@ Node.ts:58
 
 FillableNode.translateX
 
-#### Defined in
-
-Node.ts:63
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -746,10 +527,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Inherited from
 
 FillableNode.translateY
-
-#### Defined in
-
-Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -767,10 +544,6 @@ Node.ts:70
 
 FillableNode.translateY
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -786,10 +559,6 @@ The node's type.
 #### Inherited from
 
 FillableNode.type
-
-#### Defined in
-
-Node.ts:50
 
 ___
 
@@ -808,10 +577,6 @@ Must be at least MIN_DIMENSION.
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
 
-#### Defined in
-
-RectangleNode.ts:40
-
 • `set` **width**(`value`): `void`
 
 #### Parameters
@@ -828,10 +593,6 @@ RectangleNode.ts:40
 
 [IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
 
-#### Defined in
-
-RectangleNode.ts:45
-
 ## Methods
 
 ### <a id="getUniformCornerRadius" name="getUniformCornerRadius"></a> getUniformCornerRadius
@@ -844,10 +605,6 @@ Otherwise, undefined is returned.
 #### Returns
 
 `undefined` \| `number`
-
-#### Defined in
-
-RectangleNode.ts:142
 
 ___
 
@@ -866,10 +623,6 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [FillableNode](FillableNode.md).[removeFromParent](FillableNode.md#removeFromParent)
-
-#### Defined in
-
-Node.ts:118
 
 ___
 
@@ -893,7 +646,3 @@ even if the radius value set here is higher.
 #### Returns
 
 `void`
-
-#### Defined in
-
-RectangleNode.ts:154

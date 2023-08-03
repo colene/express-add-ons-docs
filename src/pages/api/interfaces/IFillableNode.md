@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / IFillableNode
+[@add-on-hlapi-sdk](../overview.md) / IFillableNode
 
 # Interface: IFillableNode
 
@@ -20,7 +20,3 @@ Interface for FillableNode.
 ### <a id="fills" name="fills"></a> fills
 
 • **fills**: [`ItemList`](../classes/ItemList.md)<[`Fill`](Fill.md)\>
-
-#### Defined in
-
-FillableNode.ts:29

@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / FillableNode
+[@add-on-hlapi-sdk](../overview.md) / FillableNode
 
 # Class: FillableNode
 
@@ -30,9 +30,7 @@ Base class for a Node that can have its own fill and stroke.
 - [absoluteTransform](FillableNode.md#absoluteTransform)
 - [allChildren](FillableNode.md#allChildren)
 - [blendMode](FillableNode.md#blendMode)
-- [entity](FillableNode.md#entity)
 - [fills](FillableNode.md#fills)
-- [locked](FillableNode.md#locked)
 - [name](FillableNode.md#name)
 - [opacity](FillableNode.md#opacity)
 - [parent](FillableNode.md#parent)
@@ -57,10 +55,6 @@ Base class for a Node that can have its own fill and stroke.
 
 [StrokableNode](StrokableNode.md).[DEFAULT_STROKE_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
 
-#### Defined in
-
-StrokableNode.ts:36
-
 ## Accessors
 
 ### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
@@ -76,10 +70,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 #### Inherited from
 
 StrokableNode.absoluteRotation
-
-#### Defined in
-
-Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -97,10 +87,6 @@ Node.ts:96
 
 StrokableNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -116,30 +102,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 StrokableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -158,10 +120,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 StrokableNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -183,10 +141,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 StrokableNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -202,30 +156,6 @@ Node.ts:190
 #### Inherited from
 
 StrokableNode.blendMode
-
-#### Defined in
-
-Node.ts:194
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-StrokableNode.entity
-
-#### Defined in
-
-Node.ts:42
 
 ___
 
@@ -243,50 +173,6 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 [IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
 
-#### Defined in
-
-FillableNode.ts:39
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-StrokableNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.locked
-
-#### Defined in
-
-Node.ts:179
-
 ___
 
 ### <a id="name" name="name"></a> name
@@ -302,10 +188,6 @@ The node's name.
 #### Inherited from
 
 StrokableNode.name
-
-#### Defined in
-
-Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -323,10 +205,6 @@ Node.ts:162
 
 StrokableNode.name
 
-#### Defined in
-
-Node.ts:167
-
 ___
 
 ### <a id="opacity" name="opacity"></a> opacity
@@ -342,10 +220,6 @@ The node's opacity.
 #### Inherited from
 
 StrokableNode.opacity
-
-#### Defined in
-
-Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -363,10 +237,6 @@ Node.ts:126
 
 StrokableNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -382,10 +252,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 StrokableNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -405,10 +271,6 @@ center, not its origin.
 
 StrokableNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -424,10 +286,6 @@ Node.ts:84
 #### Inherited from
 
 StrokableNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -445,30 +303,6 @@ The node's transform relative to its parent.
 
 StrokableNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-StrokableNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="strokes" name="strokes"></a> strokes
@@ -484,10 +318,6 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 #### Inherited from
 
 StrokableNode.strokes
-
-#### Defined in
-
-StrokableNode.ts:41
 
 ___
 
@@ -505,10 +335,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 StrokableNode.translateX
 
-#### Defined in
-
-Node.ts:58
-
 • `set` **translateX**(`value`): `void`
 
 #### Parameters
@@ -524,10 +350,6 @@ Node.ts:58
 #### Inherited from
 
 StrokableNode.translateX
-
-#### Defined in
-
-Node.ts:63
 
 ___
 
@@ -545,10 +367,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 StrokableNode.translateY
 
-#### Defined in
-
-Node.ts:70
-
 • `set` **translateY**(`value`): `void`
 
 #### Parameters
@@ -565,10 +383,6 @@ Node.ts:70
 
 StrokableNode.translateY
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -584,10 +398,6 @@ The node's type.
 #### Inherited from
 
 StrokableNode.type
-
-#### Defined in
-
-Node.ts:50
 
 ## Methods
 
@@ -606,7 +416,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [StrokableNode](StrokableNode.md).[removeFromParent](StrokableNode.md#removeFromParent)
-
-#### Defined in
-
-Node.ts:118

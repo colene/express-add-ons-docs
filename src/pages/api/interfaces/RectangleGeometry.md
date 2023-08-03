@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / RectangleGeometry
+[@add-on-hlapi-sdk](../overview.md) / RectangleGeometry
 
 # Interface: RectangleGeometry
 
@@ -15,16 +15,8 @@
 
 • **height**: `number`
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:26
-
 ___
 
 ### <a id="width" name="width"></a> width
 
 • **width**: `number`
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:25

@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / IRectangularNode
+[@add-on-hlapi-sdk](../overview.md) / IRectangularNode
 
 # Interface: IRectangularNode
 
@@ -22,16 +22,8 @@ Interface for nodes with width and height properties.
 
 • **height**: `number`
 
-#### Defined in
-
-RectangleNode.ts:28
-
 ___
 
 ### <a id="width" name="width"></a> width
 
 • **width**: `number`
-
-#### Defined in
-
-RectangleNode.ts:27

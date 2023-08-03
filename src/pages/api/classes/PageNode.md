@@ -1,41 +1,42 @@
-[@add-on-hlapi-sdk](../overview.md) / ContainerNode
+[@add-on-hlapi-sdk](../overview.md) / PageNode
 
-# Class: ContainerNode
+# Class: PageNode
 
-Base class for a Node contains an entirely generic collection of children. (Other node classes may also hold children
-in more rigid "slots" - use $[allChildren](Node.md#allChildren) for read access to children agnostic of node type).
+A PageNode represents a page in the document.
 
 ## Hierarchy
 
 - [`Node`](Node.md)
 
-  ↳ **`ContainerNode`**
+  ↳ **`PageNode`**
 
-  ↳↳ [`ArtboardNode`](ArtboardNode.md)
+## Implements
 
-  ↳↳ [`GroupNode`](GroupNode.md)
+- `Readonly`<[`IRectangularNode`](../interfaces/IRectangularNode.md)\>
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](ContainerNode.md#absoluteRotation)
-- [absoluteTransform](ContainerNode.md#absoluteTransform)
-- [allChildren](ContainerNode.md#allChildren)
-- [blendMode](ContainerNode.md#blendMode)
-- [children](ContainerNode.md#children)
-- [name](ContainerNode.md#name)
-- [opacity](ContainerNode.md#opacity)
-- [parent](ContainerNode.md#parent)
-- [relativeRotation](ContainerNode.md#relativeRotation)
-- [relativeTransform](ContainerNode.md#relativeTransform)
-- [translateX](ContainerNode.md#translateX)
-- [translateY](ContainerNode.md#translateY)
-- [type](ContainerNode.md#type)
+- [absoluteRotation](PageNode.md#absoluteRotation)
+- [absoluteTransform](PageNode.md#absoluteTransform)
+- [allChildren](PageNode.md#allChildren)
+- [artboards](PageNode.md#artboards)
+- [blendMode](PageNode.md#blendMode)
+- [height](PageNode.md#height)
+- [name](PageNode.md#name)
+- [opacity](PageNode.md#opacity)
+- [parent](PageNode.md#parent)
+- [relativeRotation](PageNode.md#relativeRotation)
+- [relativeTransform](PageNode.md#relativeTransform)
+- [translateX](PageNode.md#translateX)
+- [translateY](PageNode.md#translateY)
+- [type](PageNode.md#type)
+- [width](PageNode.md#width)
 
 ### Methods
 
-- [removeFromParent](ContainerNode.md#removeFromParent)
+- [removeFromParent](PageNode.md#removeFromParent)
 
 ## Accessors
 
@@ -91,17 +92,28 @@ ___
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
-discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
+Returns a read-only list of all children of PageNode excluding temporalArtboardContainerMain which
+is hidden by the HLAPI. PageNode also provides a restricted mutable $PageNode.artboard list.
 
 #### Returns
 
 `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-#### Inherited from
+#### Overrides
 
 Node.allChildren
+
+___
+
+### <a id="artboards" name="artboards"></a> artboards
+
+• `get` **artboards**(): [`ArtboardList`](ArtboardList.md)
+
+The artboards or scenes of a page.
+
+#### Returns
+
+[`ArtboardList`](ArtboardList.md)
 
 ___
 
@@ -141,15 +153,20 @@ Node.blendMode
 
 ___
 
-### <a id="children" name="children"></a> children
+### <a id="height" name="height"></a> height
 
-• `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+• `get` **height**(): `number`
 
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
+The height of the node.
+All Artboards within a page share the same dimensions.
 
 #### Returns
 
-[`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+`number`
+
+#### Implementation of
+
+Readonly.height
 
 ___
 
@@ -360,6 +377,23 @@ The node's type.
 #### Inherited from
 
 Node.type
+
+___
+
+### <a id="width" name="width"></a> width
+
+• `get` **width**(): `number`
+
+The width of the node.
+All Artboards within a page share the same dimensions.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.width
 
 ## Methods
 

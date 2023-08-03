@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / ColorFill
+[@add-on-hlapi-sdk](../overview.md) / ColorFill
 
 # Interface: ColorFill
 
@@ -15,7 +15,6 @@ Represents a solid-color fill.
 ### Properties
 
 - [color](ColorFill.md#color)
-- [entity](ColorFill.md#entity)
 - [type](ColorFill.md#type)
 
 ## Properties
@@ -25,26 +24,6 @@ Represents a solid-color fill.
 • `Readonly` **color**: [`Color`](../classes/Color.md)
 
 The fill color.
-
-#### Defined in
-
-Fill.ts:50
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `Readonly` **entity**: `string`
-
-The ECS entity for this fill.
-
-#### Inherited from
-
-[Fill](Fill.md).[entity](Fill.md#entity)
-
-#### Defined in
-
-Fill.ts:35
 
 ___
 
@@ -57,7 +36,3 @@ The fill type.
 #### Overrides
 
 [Fill](Fill.md).[type](Fill.md#type)
-
-#### Defined in
-
-Fill.ts:45

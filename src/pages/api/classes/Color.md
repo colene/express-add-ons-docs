@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / Color
+[@add-on-hlapi-sdk](../overview.md) / Color
 
 # Class: Color
 
@@ -23,7 +23,6 @@ Represents a color in one of any available RGB colorspaces.
 ### Methods
 
 - [getHex](Color.md#getHex)
-- [createFromHex](Color.md#createFromHex)
 
 ## Accessors
 
@@ -37,10 +36,6 @@ The alpha channel in range from 0 - 1.
 
 `number`
 
-#### Defined in
-
-Color.ts:59
-
 ___
 
 ### <a id="blue" name="blue"></a> blue
@@ -52,10 +47,6 @@ The blue channel in range from 0 - 1.
 #### Returns
 
 `number`
-
-#### Defined in
-
-Color.ts:51
 
 ___
 
@@ -69,10 +60,6 @@ This color's color space. Currently only sRGB is supported.
 
 `sRGB`
 
-#### Defined in
-
-Color.ts:67
-
 ___
 
 ### <a id="green" name="green"></a> green
@@ -85,10 +72,6 @@ The green channel in range from 0 - 1.
 
 `number`
 
-#### Defined in
-
-Color.ts:43
-
 ___
 
 ### <a id="red" name="red"></a> red
@@ -100,10 +83,6 @@ The red channel in range from 0 - 1.
 #### Returns
 
 `number`
-
-#### Defined in
-
-Color.ts:35
 
 ## Methods
 
@@ -118,34 +97,3 @@ conversion.
 #### Returns
 
 `string`
-
-#### Defined in
-
-Color.ts:102
-
-___
-
-### <a id="createFromHex" name="createFromHex"></a> createFromHex
-
-▸ `Static` **createFromHex**(`hex`): [`Color`](Color.md)
-
-Create a new color from its equivalent RGBA hex representation. Currently only
-supports formats "#RRGGBBAA" or "RRGGBBAA". If the hex value is invalid, this
-method will return transparent black.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `hex` | `string` | The color in hex representation. |
-
-#### Returns
-
-[`Color`](Color.md)
-
-A new color matching the given hex representation, or transparent black if
-the hex string cannot be parsed.
-
-#### Defined in
-
-Color.ts:92

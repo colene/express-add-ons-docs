@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / ArrowHeadType
+[@add-on-hlapi-sdk](../overview.md) / ArrowHeadType
 
 # Enumeration: ArrowHeadType
 
@@ -21,19 +21,11 @@
 
 • **circleFilled** = ``21``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:120
-
 ___
 
 ### <a id="circleHollow" name="circleHollow"></a> circleHollow
 
 • **circleHollow** = ``24``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:122
 
 ___
 
@@ -41,19 +33,11 @@ ___
 
 • **none** = ``0``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:117
-
 ___
 
 ### <a id="openTriangular" name="openTriangular"></a> openTriangular
 
 • **openTriangular** = ``11``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:119
 
 ___
 
@@ -61,19 +45,11 @@ ___
 
 • **squareFilled** = ``22``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:121
-
 ___
 
 ### <a id="squareHollow" name="squareHollow"></a> squareHollow
 
 • **squareHollow** = ``25``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:123
 
 ___
 
@@ -81,16 +57,8 @@ ___
 
 • **triangularFilled** = ``7``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:118
-
 ___
 
 ### <a id="verticalLine" name="verticalLine"></a> verticalLine
 
 • **verticalLine** = ``27``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:124

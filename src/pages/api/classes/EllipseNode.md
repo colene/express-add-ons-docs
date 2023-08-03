@@ -1,9 +1,8 @@
-[add-on-hlapi-sdk](../overview.md) / EllipseNode
+[@add-on-hlapi-sdk](../overview.md) / EllipseNode
 
 # Class: EllipseNode
 
-An EllipseNode represents an ellipse object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph ellipse objects in ECS.
+An EllipseNode represents an ellipse object in the scenegraph.
 
 ## Hierarchy
 
@@ -23,9 +22,7 @@ wrapper around the low-level APIs for interacting with scene graph ellipse objec
 - [absoluteTransform](EllipseNode.md#absoluteTransform)
 - [allChildren](EllipseNode.md#allChildren)
 - [blendMode](EllipseNode.md#blendMode)
-- [entity](EllipseNode.md#entity)
 - [fills](EllipseNode.md#fills)
-- [locked](EllipseNode.md#locked)
 - [name](EllipseNode.md#name)
 - [opacity](EllipseNode.md#opacity)
 - [parent](EllipseNode.md#parent)
@@ -52,10 +49,6 @@ wrapper around the low-level APIs for interacting with scene graph ellipse objec
 
 [FillableNode](FillableNode.md).[DEFAULT_STROKE_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
 
-#### Defined in
-
-StrokableNode.ts:36
-
 ## Accessors
 
 ### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
@@ -71,10 +64,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 #### Inherited from
 
 FillableNode.absoluteRotation
-
-#### Defined in
-
-Node.ts:96
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -92,10 +81,6 @@ Node.ts:96
 
 FillableNode.absoluteRotation
 
-#### Defined in
-
-Node.ts:101
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -111,30 +96,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 FillableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:150
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.absoluteTransform
-
-#### Defined in
-
-Node.ts:155
 
 ___
 
@@ -153,10 +114,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 FillableNode.allChildren
-
-#### Defined in
-
-Node.ts:34
 
 ___
 
@@ -178,10 +135,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 FillableNode.blendMode
 
-#### Defined in
-
-Node.ts:190
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -197,30 +150,6 @@ Node.ts:190
 #### Inherited from
 
 FillableNode.blendMode
-
-#### Defined in
-
-Node.ts:194
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-FillableNode.entity
-
-#### Defined in
-
-Node.ts:42
 
 ___
 
@@ -238,50 +167,6 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 FillableNode.fills
 
-#### Defined in
-
-FillableNode.ts:39
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-FillableNode.locked
-
-#### Defined in
-
-Node.ts:174
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.locked
-
-#### Defined in
-
-Node.ts:179
-
 ___
 
 ### <a id="name" name="name"></a> name
@@ -297,10 +182,6 @@ The node's name.
 #### Inherited from
 
 FillableNode.name
-
-#### Defined in
-
-Node.ts:162
 
 • `set` **name**(`name`): `void`
 
@@ -318,10 +199,6 @@ Node.ts:162
 
 FillableNode.name
 
-#### Defined in
-
-Node.ts:167
-
 ___
 
 ### <a id="opacity" name="opacity"></a> opacity
@@ -337,10 +214,6 @@ The node's opacity.
 #### Inherited from
 
 FillableNode.opacity
-
-#### Defined in
-
-Node.ts:126
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -358,10 +231,6 @@ Node.ts:126
 
 FillableNode.opacity
 
-#### Defined in
-
-Node.ts:131
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -377,10 +246,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 FillableNode.parent
-
-#### Defined in
-
-Node.ts:108
 
 ___
 
@@ -400,10 +265,6 @@ center, not its origin.
 
 FillableNode.relativeRotation
 
-#### Defined in
-
-Node.ts:84
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -419,10 +280,6 @@ Node.ts:84
 #### Inherited from
 
 FillableNode.relativeRotation
-
-#### Defined in
-
-Node.ts:89
 
 ___
 
@@ -440,30 +297,6 @@ The node's transform relative to its parent.
 
 FillableNode.relativeTransform
 
-#### Defined in
-
-Node.ts:138
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-FillableNode.relativeTransform
-
-#### Defined in
-
-Node.ts:143
-
 ___
 
 ### <a id="rx" name="rx"></a> rx
@@ -475,10 +308,6 @@ The radius of the ellipse on the x-axis.
 #### Returns
 
 `number`
-
-#### Defined in
-
-EllipseNode.ts:32
 
 • `set` **rx**(`value`): `void`
 
@@ -495,10 +324,6 @@ Must be at least MIN_DIMENSION / 2.
 
 `void`
 
-#### Defined in
-
-EllipseNode.ts:41
-
 ___
 
 ### <a id="ry" name="ry"></a> ry
@@ -510,10 +335,6 @@ The radius of the ellipse on the y-axis.
 #### Returns
 
 `number`
-
-#### Defined in
-
-EllipseNode.ts:48
 
 • `set` **ry**(`value`): `void`
 
@@ -529,10 +350,6 @@ Must be at least MIN_DIMENSION / 2.
 #### Returns
 
 `void`
-
-#### Defined in
-
-EllipseNode.ts:57
 
 ___
 
@@ -550,10 +367,6 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 
 FillableNode.strokes
 
-#### Defined in
-
-StrokableNode.ts:41
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -569,10 +382,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Inherited from
 
 FillableNode.translateX
-
-#### Defined in
-
-Node.ts:58
 
 • `set` **translateX**(`value`): `void`
 
@@ -590,10 +399,6 @@ Node.ts:58
 
 FillableNode.translateX
 
-#### Defined in
-
-Node.ts:63
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -609,10 +414,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Inherited from
 
 FillableNode.translateY
-
-#### Defined in
-
-Node.ts:70
 
 • `set` **translateY**(`value`): `void`
 
@@ -630,10 +431,6 @@ Node.ts:70
 
 FillableNode.translateY
 
-#### Defined in
-
-Node.ts:75
-
 ___
 
 ### <a id="type" name="type"></a> type
@@ -649,10 +446,6 @@ The node's type.
 #### Inherited from
 
 FillableNode.type
-
-#### Defined in
-
-Node.ts:50
 
 ## Methods
 
@@ -671,7 +464,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [FillableNode](FillableNode.md).[removeFromParent](FillableNode.md#removeFromParent)
-
-#### Defined in
-
-Node.ts:118

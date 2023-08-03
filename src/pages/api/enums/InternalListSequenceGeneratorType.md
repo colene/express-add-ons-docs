@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / InternalListSequenceGeneratorType
+[@add-on-hlapi-sdk](../overview.md) / InternalListSequenceGeneratorType
 
 # Enumeration: InternalListSequenceGeneratorType
 
@@ -22,19 +22,11 @@
 
 • **bullet** = ``6``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:188
-
 ___
 
 ### <a id="doubleZeroPrefixNumeric" name="doubleZeroPrefixNumeric"></a> doubleZeroPrefixNumeric
 
 • **doubleZeroPrefixNumeric** = ``8``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:190
 
 ___
 
@@ -42,19 +34,11 @@ ___
 
 • **lowercaseAlpha** = ``3``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:185
-
 ___
 
 ### <a id="lowercaseRomanNum" name="lowercaseRomanNum"></a> lowercaseRomanNum
 
 • **lowercaseRomanNum** = ``5``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:187
 
 ___
 
@@ -62,19 +46,11 @@ ___
 
 • **numeric** = ``1``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:183
-
 ___
 
 ### <a id="singleZeroPrefixNumeric" name="singleZeroPrefixNumeric"></a> singleZeroPrefixNumeric
 
 • **singleZeroPrefixNumeric** = ``7``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:189
 
 ___
 
@@ -82,26 +58,14 @@ ___
 
 • **uppercaseAlpha** = ``2``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:184
-
 ___
 
 ### <a id="uppercaseRomanNum" name="uppercaseRomanNum"></a> uppercaseRomanNum
 
 • **uppercaseRomanNum** = ``4``
 
-#### Defined in
-
-support/HzScenegraphTypes.ts:186
-
 ___
 
 ### <a id="userDefined" name="userDefined"></a> userDefined
 
 • **userDefined** = ``0``
-
-#### Defined in
-
-support/HzScenegraphTypes.ts:182

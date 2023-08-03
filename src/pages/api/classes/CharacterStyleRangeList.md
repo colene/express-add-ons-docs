@@ -1,4 +1,4 @@
-[add-on-hlapi-sdk](../overview.md) / CharacterStyleRangeList
+[@add-on-hlapi-sdk](../overview.md) / CharacterStyleRangeList
 
 # Class: CharacterStyleRangeList
 
@@ -6,7 +6,7 @@ Represents a list of character style ranges.
 
 ## Hierarchy
 
-- `StyleRangeList`<`RangedCharacterStyle`\>
+- [`StyleRangeList`](StyleRangeList.md)<`RangedCharacterStyle`\>
 
   ↳ **`CharacterStyleRangeList`**
 
@@ -36,8 +36,4 @@ Sets character styles for a batch of ranges (length) of characters.
 
 #### Overrides
 
-StyleRangeList.setStyleRanges
-
-#### Defined in
-
-CharacterStyles.ts:41
+[StyleRangeList](StyleRangeList.md).[setStyleRanges](StyleRangeList.md#setStyleRanges)
