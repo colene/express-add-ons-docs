@@ -1,41 +1,39 @@
-[@add-on-hlapi-sdk](../overview.md) / ContainerNode
+[@add-on-hlapi-sdk](../overview.md) / MediaContainerNode
 
-# Class: ContainerNode
+# Class: MediaContainerNode
 
-Base class for a Node contains an entirely generic collection of children. (Other node classes may also hold children
-in more rigid "slots" - use $[allChildren](Node.md#allChildren) for read access to children agnostic of node type).
+A MediaContainerNode is a multi-node construct that displays media (such as images or video) with optional cropping and
+clipping to a shape mask. The underlying media asset is always rectangular, but the final appearance of this node is
+determined by the maskShape which is not necessarily a rectangle.
 
 ## Hierarchy
 
 - [`Node`](Node.md)
 
-  ↳ **`ContainerNode`**
-
-  ↳↳ [`ArtboardNode`](ArtboardNode.md)
-
-  ↳↳ [`GroupNode`](GroupNode.md)
+  ↳ **`MediaContainerNode`**
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](ContainerNode.md#absoluteRotation)
-- [absoluteTransform](ContainerNode.md#absoluteTransform)
-- [allChildren](ContainerNode.md#allChildren)
-- [blendMode](ContainerNode.md#blendMode)
-- [children](ContainerNode.md#children)
-- [name](ContainerNode.md#name)
-- [opacity](ContainerNode.md#opacity)
-- [parent](ContainerNode.md#parent)
-- [relativeRotation](ContainerNode.md#relativeRotation)
-- [relativeTransform](ContainerNode.md#relativeTransform)
-- [translateX](ContainerNode.md#translateX)
-- [translateY](ContainerNode.md#translateY)
-- [type](ContainerNode.md#type)
+- [absoluteRotation](MediaContainerNode.md#absoluteRotation)
+- [absoluteTransform](MediaContainerNode.md#absoluteTransform)
+- [allChildren](MediaContainerNode.md#allChildren)
+- [blendMode](MediaContainerNode.md#blendMode)
+- [maskShape](MediaContainerNode.md#maskShape)
+- [mediaRectangle](MediaContainerNode.md#mediaRectangle)
+- [name](MediaContainerNode.md#name)
+- [opacity](MediaContainerNode.md#opacity)
+- [parent](MediaContainerNode.md#parent)
+- [relativeRotation](MediaContainerNode.md#relativeRotation)
+- [relativeTransform](MediaContainerNode.md#relativeTransform)
+- [translateX](MediaContainerNode.md#translateX)
+- [translateY](MediaContainerNode.md#translateY)
+- [type](MediaContainerNode.md#type)
 
 ### Methods
 
-- [removeFromParent](ContainerNode.md#removeFromParent)
+- [removeFromParent](MediaContainerNode.md#removeFromParent)
 
 ## Accessors
 
@@ -141,15 +139,30 @@ Node.blendMode
 
 ___
 
-### <a id="children" name="children"></a> children
+### <a id="maskShape" name="maskShape"></a> maskShape
 
-• `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+• `get` **maskShape**(): [`FillableNode`](FillableNode.md)
 
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
+The mask used for cropping/clipping the media. The bounds of this shape are entire visible bounds of the container.
+The shape's geometric properties (position, rotation, size, etc.) can be changed, but it cannot be replaced by a
+different shape via this API.
 
 #### Returns
 
-[`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+[`FillableNode`](FillableNode.md)
+
+___
+
+### <a id="mediaRectangle" name="mediaRectangle"></a> mediaRectangle
+
+• `get` **mediaRectangle**(): [`Node`](Node.md) \| [`ImageRectangleNode`](ImageRectangleNode.md)
+
+The rectangular node representing the entire, uncropped bounds of the media (image or video). The media's position and
+rotation can be changed, but it cannot be resized yet via this API.
+
+#### Returns
+
+[`Node`](Node.md) \| [`ImageRectangleNode`](ImageRectangleNode.md)
 
 ___
 

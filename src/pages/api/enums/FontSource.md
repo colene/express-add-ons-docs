@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / FontSource
+[@add-on-hlapi-sdk](../overview.md) / FontSource
 
 # Enumeration: FontSource
 
@@ -16,26 +16,14 @@
 
 • **AF** = ``"AF"``
 
-#### Defined in
-
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:23
-
 ___
 
 ### <a id="BYOF" name="BYOF"></a> BYOF
 
 • **BYOF** = ``"BYOF"``
 
-#### Defined in
-
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:24
-
 ___
 
 ### <a id="unknown" name="unknown"></a> unknown
 
 • **unknown** = ``"unknown"``
-
-#### Defined in
-
-platform/foundation/text/text-types/dist/PersistedECSDefinitions.d.ts:22

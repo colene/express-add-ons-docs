@@ -1,41 +1,37 @@
-[@add-on-hlapi-sdk](../overview.md) / ContainerNode
+[@add-on-hlapi-sdk](../overview.md) / ExpressRootNode
 
-# Class: ContainerNode
+# Class: ExpressRootNode
 
-Base class for a Node contains an entirely generic collection of children. (Other node classes may also hold children
-in more rigid "slots" - use $[allChildren](Node.md#allChildren) for read access to children agnostic of node type).
+An ExpressRootNode represents the artwork object in the scenegraph. This class is the High Level API
+wrapper around the low-level APIs for interacting with the artwork in ECS.
 
 ## Hierarchy
 
 - [`Node`](Node.md)
 
-  ↳ **`ContainerNode`**
-
-  ↳↳ [`ArtboardNode`](ArtboardNode.md)
-
-  ↳↳ [`GroupNode`](GroupNode.md)
+  ↳ **`ExpressRootNode`**
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](ContainerNode.md#absoluteRotation)
-- [absoluteTransform](ContainerNode.md#absoluteTransform)
-- [allChildren](ContainerNode.md#allChildren)
-- [blendMode](ContainerNode.md#blendMode)
-- [children](ContainerNode.md#children)
-- [name](ContainerNode.md#name)
-- [opacity](ContainerNode.md#opacity)
-- [parent](ContainerNode.md#parent)
-- [relativeRotation](ContainerNode.md#relativeRotation)
-- [relativeTransform](ContainerNode.md#relativeTransform)
-- [translateX](ContainerNode.md#translateX)
-- [translateY](ContainerNode.md#translateY)
-- [type](ContainerNode.md#type)
+- [absoluteRotation](ExpressRootNode.md#absoluteRotation)
+- [absoluteTransform](ExpressRootNode.md#absoluteTransform)
+- [allChildren](ExpressRootNode.md#allChildren)
+- [blendMode](ExpressRootNode.md#blendMode)
+- [name](ExpressRootNode.md#name)
+- [opacity](ExpressRootNode.md#opacity)
+- [pages](ExpressRootNode.md#pages)
+- [parent](ExpressRootNode.md#parent)
+- [relativeRotation](ExpressRootNode.md#relativeRotation)
+- [relativeTransform](ExpressRootNode.md#relativeTransform)
+- [translateX](ExpressRootNode.md#translateX)
+- [translateY](ExpressRootNode.md#translateY)
+- [type](ExpressRootNode.md#type)
 
 ### Methods
 
-- [removeFromParent](ContainerNode.md#removeFromParent)
+- [removeFromParent](ExpressRootNode.md#removeFromParent)
 
 ## Accessors
 
@@ -141,18 +137,6 @@ Node.blendMode
 
 ___
 
-### <a id="children" name="children"></a> children
-
-• `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
-
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
-
-#### Returns
-
-[`ItemList`](ItemList.md)<[`Node`](Node.md)\>
-
-___
-
 ### <a id="name" name="name"></a> name
 
 • `get` **name**(): `undefined` \| `string`
@@ -214,6 +198,18 @@ Node.opacity
 #### Inherited from
 
 Node.opacity
+
+___
+
+### <a id="pages" name="pages"></a> pages
+
+• `get` **pages**(): [`PageList`](PageList.md)
+
+The pages of artwork root.
+
+#### Returns
+
+[`PageList`](PageList.md)
 
 ___
 

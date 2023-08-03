@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / BitmapImage
+[@add-on-hlapi-sdk](../overview.md) / BitmapImage
 
 # Interface: BitmapImage
 
@@ -9,33 +9,16 @@ structure via Editor.createImageContainer().
 
 ### Properties
 
-- [entity](BitmapImage.md#entity)
 - [height](BitmapImage.md#height)
 - [width](BitmapImage.md#width)
 
 ## Properties
-
-### <a id="entity" name="entity"></a> entity
-
-• `Readonly` **entity**: `string`
-
-The ECS entity for this image resource.
-
-#### Defined in
-
-platform/authoring/api/src/Fill.ts:61
-
-___
 
 ### <a id="height" name="height"></a> height
 
 • `Readonly` **height**: `number`
 
 Original height of the bitmap in pixels.
-
-#### Defined in
-
-platform/authoring/api/src/Fill.ts:71
 
 ___
 
@@ -44,7 +27,3 @@ ___
 • `Readonly` **width**: `number`
 
 Original width of the bitmap in pixels.
-
-#### Defined in
-
-platform/authoring/api/src/Fill.ts:66

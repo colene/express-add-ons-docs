@@ -1,8 +1,8 @@
-[ /authoring-api](../overview.md) / ItemList
+[@add-on-hlapi-sdk](../overview.md) / ItemList
 
 # Class: ItemList<T\>
 
-ItemList represents an ordered list of high-level API wrapper objects, representing entities that are all children of the
+ItemList represents an ordered list of editor API wrapper objects, representing entities that are all children of the
 same parent node. All children are of the same "flavor" (ChildOf component ID), i.e. this represents a view onto a
 single ChildrenQuery's result list. (Note some node types may use an ItemList subclass to present a *filtered* view of
 the overall query result list, however).
@@ -13,13 +13,15 @@ ItemList also provides APIs for manipulating the list by adding items to the par
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends `ListItem` |
+| `T` | extends [`ListItem`](../interfaces/ListItem.md) |
+
+## Hierarchy
+
+- [`ReadOnlyItemList`](ReadOnlyItemList.md)<`T`\>
+
+  ↳ **`ItemList`**
 
 ## Table of contents
-
-### Constructors
-
-- [constructor](ItemList.md#constructor)
 
 ### Accessors
 
@@ -39,31 +41,6 @@ ItemList also provides APIs for manipulating the list by adding items to the par
 - [replace](ItemList.md#replace)
 - [toArray](ItemList.md#toArray)
 
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new ItemList**<`T`\>(`_parentEntity`, `_childrenUtils`, `_toWrapper`, `_hasFixedParent`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `ListItem` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_parentEntity` | `string` | Parent node whose children this ItemList presents a live, mutable view of. |
-| `_childrenUtils` | `ChildrenUtils` | ChildrenUtils for the flavor of child list (which ChildOf component) this list represents. |
-| `_toWrapper` | (`entity`: `string`) => `T` | Converts a child entity in this list to a public API wrapper object of the appropriate type (some                     subclass of type T). |
-| `_hasFixedParent` | (`item`: `T`) => `boolean` | Returns false if the given item cannot be reparented. |
-
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:44
-
 ## Accessors
 
 ### <a id="first" name="first"></a> first
@@ -76,9 +53,9 @@ First item in this list, or undefined if list is empty.
 
 `undefined` \| `T`
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:61
+ReadOnlyItemList.first
 
 ___
 
@@ -92,9 +69,9 @@ Last item in this list, or undefined if list is empty.
 
 `undefined` \| `T`
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:69
+ReadOnlyItemList.last
 
 ___
 
@@ -108,9 +85,9 @@ Number of items in this list.
 
 `number`
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:54
+ReadOnlyItemList.length
 
 ## Methods
 
@@ -124,9 +101,9 @@ Iterates over all the items in this list. Mutations that occur mid-iteration are
 
 `Iterator`<`T`, `any`, `undefined`\>
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:230
+[ReadOnlyItemList](ReadOnlyItemList.md).[[iterator]](ReadOnlyItemList.md#[iterator])
 
 ___
 
@@ -147,10 +124,6 @@ removed from their previous parent, if any – or if an item is already in *this
 
 `void`
 
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:90
-
 ___
 
 ### <a id="clear" name="clear"></a> clear
@@ -162,10 +135,6 @@ Remove all items from this list. No-op if list is already empty.
 #### Returns
 
 `void`
-
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:145
 
 ___
 
@@ -188,10 +157,6 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 `void`
 
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:195
-
 ___
 
 ### <a id="insertBefore" name="insertBefore"></a> insertBefore
@@ -213,18 +178,13 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 `void`
 
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:186
-
 ___
 
 ### <a id="item" name="item"></a> item
 
 ▸ **item**(`index`): `undefined` \| `T`
 
-Returns item at the given index, or undefined if index is out of range. The index is relative only to items within this
-list - if a node holds children in other "slots" as well they are not part of the index numbering here.
+Returns item at the given index, or undefined if index is out of range.
 
 #### Parameters
 
@@ -236,9 +196,9 @@ list - if a node holds children in other "slots" as well they are not part of th
 
 `undefined` \| `T`
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:80
+[ReadOnlyItemList](ReadOnlyItemList.md).[item](ReadOnlyItemList.md#item)
 
 ___
 
@@ -258,10 +218,6 @@ Throws without performing any removals if any item is not a member of this list.
 #### Returns
 
 `void`
-
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:126
 
 ___
 
@@ -284,10 +240,6 @@ changed. No-op if both arguments are the same item.
 
 `void`
 
-#### Defined in
-
-platform/authoring/api/src/ItemList.ts:157
-
 ___
 
 ### <a id="toArray" name="toArray"></a> toArray
@@ -300,6 +252,6 @@ All items in the list, as a static array. Mutations that occur later are not ref
 
 readonly `T`[]
 
-#### Defined in
+#### Inherited from
 
-platform/authoring/api/src/ItemList.ts:237
+[ReadOnlyItemList](ReadOnlyItemList.md).[toArray](ReadOnlyItemList.md#toArray)

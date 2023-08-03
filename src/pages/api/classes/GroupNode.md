@@ -1,9 +1,8 @@
-[ /authoring-api](../overview.md) / GroupNode
+[@add-on-hlapi-sdk](../overview.md) / GroupNode
 
 # Class: GroupNode
 
-A GroupNode represents a group object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with scene graph group objects in ECS.
+A GroupNode represents a group object in the scenegraph.
 
 ## Hierarchy
 
@@ -13,14 +12,6 @@ wrapper around the low-level APIs for interacting with scene graph group objects
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](GroupNode.md#constructor)
-
-### Properties
-
-- [\_core](GroupNode.md#_core)
-
 ### Accessors
 
 - [absoluteRotation](GroupNode.md#absoluteRotation)
@@ -28,8 +19,6 @@ wrapper around the low-level APIs for interacting with scene graph group objects
 - [allChildren](GroupNode.md#allChildren)
 - [blendMode](GroupNode.md#blendMode)
 - [children](GroupNode.md#children)
-- [entity](GroupNode.md#entity)
-- [locked](GroupNode.md#locked)
 - [maskShape](GroupNode.md#maskShape)
 - [name](GroupNode.md#name)
 - [opacity](GroupNode.md#opacity)
@@ -42,52 +31,7 @@ wrapper around the low-level APIs for interacting with scene graph group objects
 
 ### Methods
 
-- [canRemoveChild](GroupNode.md#canRemoveChild)
 - [removeFromParent](GroupNode.md#removeFromParent)
-- [canChangeParent](GroupNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new GroupNode**(`entity`, `core`)
-
-**`Throws`**
-
-if the input ECS entity does not have group component.
-
-**`Remarks`**
-
-Please use editor.createRectangle if there is no valid entity for this constructor.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `string` |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Overrides
-
-[ContainerNode](ContainerNode.md).[constructor](ContainerNode.md#constructor)
-
-#### Defined in
-
-platform/authoring/api/src/GroupNode.ts:39
-
-## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[_core](ContainerNode.md#_core)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
 
 ## Accessors
 
@@ -105,10 +49,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:159
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -125,10 +65,6 @@ platform/authoring/api/src/Node.ts:159
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:163
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -144,30 +80,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 ContainerNode.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:257
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:261
 
 ___
 
@@ -187,15 +99,17 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 
 ContainerNode.allChildren
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:58
-
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
+
+Blend mode determines how a node is composited onto the content below it.
+The default value is [normal](../enums/BlendModeValue.md#normal)
+
+[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
+are equivalent for leaf nodes, and only visually different for nodes with children.
 
 #### Returns
 
@@ -204,10 +118,6 @@ ___
 #### Inherited from
 
 ContainerNode.blendMode
-
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:54
 
 • `set` **blendMode**(`value`): `void`
 
@@ -225,10 +135,6 @@ platform/authoring/api/src/ContainerNode.ts:54
 
 ContainerNode.blendMode
 
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:57
-
 ___
 
 ### <a id="children" name="children"></a> children
@@ -245,87 +151,19 @@ The node's children. Use the methods on this ItemList object to get, add, and re
 
 ContainerNode.children
 
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:34
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-ContainerNode.entity
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:97
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:293
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:297
-
 ___
 
 ### <a id="maskShape" name="maskShape"></a> maskShape
 
-• `get` **maskShape**(): `undefined` \| `FillableNode`
+• `get` **maskShape**(): `undefined` \| [`FillableNode`](FillableNode.md)
 
 The mask node in the group.
 
 #### Returns
 
-`undefined` \| `FillableNode`
+`undefined` \| [`FillableNode`](FillableNode.md)
 
 undefined if no mask is found.
-
-#### Defined in
-
-platform/authoring/api/src/GroupNode.ts:50
 
 • `set` **maskShape**(`mask`): `void`
 
@@ -339,15 +177,11 @@ if the given node type cannot be used as a vector mask.
 
 | Name | Type |
 | :------ | :------ |
-| `mask` | `undefined` \| `FillableNode` |
+| `mask` | `undefined` \| [`FillableNode`](FillableNode.md) |
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-platform/authoring/api/src/GroupNode.ts:67
 
 ___
 
@@ -365,10 +199,6 @@ The node's name.
 
 ContainerNode.name
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:277
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -384,10 +214,6 @@ platform/authoring/api/src/Node.ts:277
 #### Inherited from
 
 ContainerNode.name
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:281
 
 ___
 
@@ -405,10 +231,6 @@ The node's opacity.
 
 ContainerNode.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:234
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -425,10 +247,6 @@ platform/authoring/api/src/Node.ts:234
 
 ContainerNode.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:238
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -444,10 +262,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 ContainerNode.parent
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:211
 
 ___
 
@@ -467,10 +281,6 @@ center, not its origin.
 
 ContainerNode.relativeRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:148
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -486,10 +296,6 @@ platform/authoring/api/src/Node.ts:148
 #### Inherited from
 
 ContainerNode.relativeRotation
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:152
 
 ___
 
@@ -507,30 +313,6 @@ The node's transform relative to its parent.
 
 ContainerNode.relativeTransform
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:246
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.relativeTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:250
-
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -546,10 +328,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 #### Inherited from
 
 ContainerNode.translateX
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:116
 
 • `set` **translateX**(`value`): `void`
 
@@ -567,10 +345,6 @@ platform/authoring/api/src/Node.ts:116
 
 ContainerNode.translateX
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:120
-
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -586,10 +360,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 #### Inherited from
 
 ContainerNode.translateY
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:131
 
 • `set` **translateY**(`value`): `void`
 
@@ -607,55 +377,23 @@ platform/authoring/api/src/Node.ts:131
 
 ContainerNode.translateY
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:135
-
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
 ContainerNode.type
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:104
-
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_child` | [`Node`](Node.md) |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[canRemoveChild](ContainerNode.md#canRemoveChild)
-
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:48
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -672,37 +410,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [ContainerNode](ContainerNode.md).[removeFromParent](ContainerNode.md#removeFromParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:221
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[canChangeParent](ContainerNode.md#canChangeParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82

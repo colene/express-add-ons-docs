@@ -22,7 +22,7 @@ module.exports = {
         title: 'References',
         menu: [
           {
-            title: 'Authoring APIs',            
+            title: 'Editor APIs',            
             path: '/api/overview.md'
           }          
         ]

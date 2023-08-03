@@ -1,14 +1,8 @@
-[ /authoring-api](../overview.md) / ArtboardNode
+[@add-on-hlapi-sdk](../overview.md) / ArtboardNode
 
 # Class: ArtboardNode
 
-An ArtboardNode represents an artboard object in the scenegraph. This class is a high-level API
-wrapper around the low-level APIs for interacting with artboards in ECS.
-
-**`Remarks`**
-
-Despite supporting the 'fills' list property, ArtboardNode does not extend FillableNode due to limitations
-on multiple inheritance.
+An ArtboardNode represents an artboard object in the scenegraph. This is the representation of the 'Scene' in Editor APIs.
 
 ## Hierarchy
 
@@ -18,18 +12,10 @@ on multiple inheritance.
 
 ## Implements
 
-- `IFillableNode`
-- `IRectangularNode`
+- [`IFillableNode`](../interfaces/IFillableNode.md)
+- [`IRectangularNode`](../interfaces/IRectangularNode.md)
 
 ## Table of contents
-
-### Constructors
-
-- [constructor](ArtboardNode.md#constructor)
-
-### Properties
-
-- [\_core](ArtboardNode.md#_core)
 
 ### Accessors
 
@@ -38,10 +24,8 @@ on multiple inheritance.
 - [allChildren](ArtboardNode.md#allChildren)
 - [blendMode](ArtboardNode.md#blendMode)
 - [children](ArtboardNode.md#children)
-- [entity](ArtboardNode.md#entity)
 - [fills](ArtboardNode.md#fills)
 - [height](ArtboardNode.md#height)
-- [locked](ArtboardNode.md#locked)
 - [name](ArtboardNode.md#name)
 - [opacity](ArtboardNode.md#opacity)
 - [parent](ArtboardNode.md#parent)
@@ -55,44 +39,7 @@ on multiple inheritance.
 
 ### Methods
 
-- [canRemoveChild](ArtboardNode.md#canRemoveChild)
 - [removeFromParent](ArtboardNode.md#removeFromParent)
-- [canChangeParent](ArtboardNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new ArtboardNode**(`entity`, `core`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `string` |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Overrides
-
-[ContainerNode](ContainerNode.md).[constructor](ContainerNode.md#constructor)
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:44
-
-## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[_core](ContainerNode.md#_core)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
 
 ## Accessors
 
@@ -110,10 +57,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:159
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -130,10 +73,6 @@ platform/authoring/api/src/Node.ts:159
 
 ContainerNode.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:163
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -149,30 +88,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 ContainerNode.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:257
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:261
 
 ___
 
@@ -192,15 +107,17 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 
 ContainerNode.allChildren
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:58
-
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
+
+Blend mode determines how a node is composited onto the content below it.
+The default value is [normal](../enums/BlendModeValue.md#normal)
+
+[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
+are equivalent for leaf nodes, and only visually different for nodes with children.
 
 #### Returns
 
@@ -209,10 +126,6 @@ ___
 #### Inherited from
 
 ContainerNode.blendMode
-
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:54
 
 • `set` **blendMode**(`value`): `void`
 
@@ -230,10 +143,6 @@ platform/authoring/api/src/ContainerNode.ts:54
 
 ContainerNode.blendMode
 
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:57
-
 ___
 
 ### <a id="children" name="children"></a> children
@@ -250,30 +159,6 @@ The node's children. Use the methods on this ItemList object to get, add, and re
 
 ContainerNode.children
 
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:34
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-ContainerNode.entity
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:97
-
 ___
 
 ### <a id="fills" name="fills"></a> fills
@@ -288,11 +173,7 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 #### Implementation of
 
-IFillableNode.fills
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:76
+[IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
 
 ___
 
@@ -301,7 +182,6 @@ ___
 • `get` **height**(): `number`
 
 The height of the node.
-Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Returns
 
@@ -309,71 +189,7 @@ Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Implementation of
 
-IRectangularNode.height
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:66
-
-• `set` **height**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-IRectangularNode.height
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:69
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:293
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:297
+[IRectangularNode](../interfaces/IRectangularNode.md).[height](../interfaces/IRectangularNode.md#height)
 
 ___
 
@@ -391,10 +207,6 @@ The node's name.
 
 ContainerNode.name
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:277
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -410,10 +222,6 @@ platform/authoring/api/src/Node.ts:277
 #### Inherited from
 
 ContainerNode.name
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:281
 
 ___
 
@@ -431,10 +239,6 @@ The node's opacity.
 
 ContainerNode.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:234
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -451,29 +255,22 @@ platform/authoring/api/src/Node.ts:234
 
 ContainerNode.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:238
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
 
-• `get` **parent**(): `undefined` \| [`Node`](Node.md)
+• `get` **parent**(): `undefined` \| [`PageNode`](PageNode.md)
 
-The node's parent. Undefined if the node is an orphan, or if the node is the artwork root.
+The node's parent. Returns the wrapper PageNode (TemporalArtboardContainer) rather than
+the TemporalArtboardContainerMain which is hidden by the HLAPI.
 
 #### Returns
 
-`undefined` \| [`Node`](Node.md)
+`undefined` \| [`PageNode`](PageNode.md)
 
-#### Inherited from
+#### Overrides
 
 ContainerNode.parent
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:211
 
 ___
 
@@ -493,10 +290,6 @@ center, not its origin.
 
 ContainerNode.relativeRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:148
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -512,10 +305,6 @@ platform/authoring/api/src/Node.ts:148
 #### Inherited from
 
 ContainerNode.relativeRotation
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:152
 
 ___
 
@@ -533,30 +322,6 @@ The node's transform relative to its parent.
 
 ContainerNode.relativeTransform
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:246
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.relativeTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:250
-
 ___
 
 ### <a id="strokes" name="strokes"></a> strokes
@@ -568,10 +333,6 @@ Any strokes(s) on the shape. Use the methods on this ItemList object to get, add
 #### Returns
 
 [`ItemList`](ItemList.md)<[`Stroke`](../interfaces/Stroke.md)\>
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:83
 
 ___
 
@@ -589,10 +350,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 ContainerNode.translateX
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:116
-
 • `set` **translateX**(`value`): `void`
 
 #### Parameters
@@ -608,10 +365,6 @@ platform/authoring/api/src/Node.ts:116
 #### Inherited from
 
 ContainerNode.translateX
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:120
 
 ___
 
@@ -629,10 +382,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 ContainerNode.translateY
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:131
-
 • `set` **translateY**(`value`): `void`
 
 #### Parameters
@@ -649,29 +398,21 @@ platform/authoring/api/src/Node.ts:131
 
 ContainerNode.translateY
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:135
-
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
 ContainerNode.type
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:104
 
 ___
 
@@ -680,7 +421,6 @@ ___
 • `get` **width**(): `number`
 
 The width of the node.
-Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Returns
 
@@ -688,57 +428,9 @@ Must be at least [MIN_DIMENSION](../overview.md#MIN_DIMENSION).
 
 #### Implementation of
 
-IRectangularNode.width
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:55
-
-• `set` **width**(`value`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-IRectangularNode.width
-
-#### Defined in
-
-platform/authoring/api/src/ArtboardNode.ts:58
+[IRectangularNode](../interfaces/IRectangularNode.md).[width](../interfaces/IRectangularNode.md#width)
 
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_child` | [`Node`](Node.md) |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[canRemoveChild](ContainerNode.md#canRemoveChild)
-
-#### Defined in
-
-platform/authoring/api/src/ContainerNode.ts:48
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -755,37 +447,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [ContainerNode](ContainerNode.md).[removeFromParent](ContainerNode.md#removeFromParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:221
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-[ContainerNode](ContainerNode.md).[canChangeParent](ContainerNode.md#canChangeParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82

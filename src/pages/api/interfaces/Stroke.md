@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / Stroke
+[@add-on-hlapi-sdk](../overview.md) / Stroke
 
 # Interface: Stroke
 
@@ -6,7 +6,7 @@ Represents a stroke in the scene graph.
 
 ## Hierarchy
 
-- `StrokeOptions`
+- [`StrokeOptions`](StrokeOptions.md)
 
   ↳ **`Stroke`**
 
@@ -17,7 +17,6 @@ Represents a stroke in the scene graph.
 - [color](Stroke.md#color)
 - [dashOffset](Stroke.md#dashOffset)
 - [dashPattern](Stroke.md#dashPattern)
-- [entity](Stroke.md#entity)
 - [position](Stroke.md#position)
 - [width](Stroke.md#width)
 
@@ -31,11 +30,7 @@ The color of a stroke.
 
 #### Inherited from
 
-StrokeOptions.color
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:30
+[StrokeOptions](StrokeOptions.md).[color](StrokeOptions.md#color)
 
 ___
 
@@ -47,11 +42,7 @@ Number of pixels the beginning of dash pattern should be offset along the stroke
 
 #### Inherited from
 
-StrokeOptions.dashOffset
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:44
+[StrokeOptions](StrokeOptions.md).[dashOffset](StrokeOptions.md#dashOffset)
 
 ___
 
@@ -65,21 +56,7 @@ repeated along the length of the stroke. The first value represents the first so
 
 #### Inherited from
 
-StrokeOptions.dashPattern
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:40
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `Readonly` **entity**: `string`
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:51
+[StrokeOptions](StrokeOptions.md).[dashPattern](StrokeOptions.md#dashPattern)
 
 ___
 
@@ -89,10 +66,6 @@ ___
 
 The position of the stroke relative to the outline of a shape.
 Currently, only center position is supported for persisted strokes.
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:57
 
 ___
 
@@ -104,8 +77,4 @@ The thickness of a stroke.
 
 #### Inherited from
 
-StrokeOptions.width
-
-#### Defined in
-
-platform/authoring/api/src/Stroke.ts:34
+[StrokeOptions](StrokeOptions.md).[width](StrokeOptions.md#width)

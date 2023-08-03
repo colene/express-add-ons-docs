@@ -1,41 +1,59 @@
-[@add-on-hlapi-sdk](../overview.md) / ContainerNode
+[@add-on-hlapi-sdk](../overview.md) / FillableNode
 
-# Class: ContainerNode
+# Class: FillableNode
 
-Base class for a Node contains an entirely generic collection of children. (Other node classes may also hold children
-in more rigid "slots" - use $[allChildren](Node.md#allChildren) for read access to children agnostic of node type).
+Base class for a Node that can have its own fill and stroke.
 
 ## Hierarchy
 
-- [`Node`](Node.md)
+- [`StrokableNode`](StrokableNode.md)
 
-  ↳ **`ContainerNode`**
+  ↳ **`FillableNode`**
 
-  ↳↳ [`ArtboardNode`](ArtboardNode.md)
+  ↳↳ [`EllipseNode`](EllipseNode.md)
 
-  ↳↳ [`GroupNode`](GroupNode.md)
+  ↳↳ [`RectangleNode`](RectangleNode.md)
+
+## Implements
+
+- [`IFillableNode`](../interfaces/IFillableNode.md)
 
 ## Table of contents
 
+### Properties
+
+- [DEFAULT\_STROKE\_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
+
 ### Accessors
 
-- [absoluteRotation](ContainerNode.md#absoluteRotation)
-- [absoluteTransform](ContainerNode.md#absoluteTransform)
-- [allChildren](ContainerNode.md#allChildren)
-- [blendMode](ContainerNode.md#blendMode)
-- [children](ContainerNode.md#children)
-- [name](ContainerNode.md#name)
-- [opacity](ContainerNode.md#opacity)
-- [parent](ContainerNode.md#parent)
-- [relativeRotation](ContainerNode.md#relativeRotation)
-- [relativeTransform](ContainerNode.md#relativeTransform)
-- [translateX](ContainerNode.md#translateX)
-- [translateY](ContainerNode.md#translateY)
-- [type](ContainerNode.md#type)
+- [absoluteRotation](FillableNode.md#absoluteRotation)
+- [absoluteTransform](FillableNode.md#absoluteTransform)
+- [allChildren](FillableNode.md#allChildren)
+- [blendMode](FillableNode.md#blendMode)
+- [fills](FillableNode.md#fills)
+- [name](FillableNode.md#name)
+- [opacity](FillableNode.md#opacity)
+- [parent](FillableNode.md#parent)
+- [relativeRotation](FillableNode.md#relativeRotation)
+- [relativeTransform](FillableNode.md#relativeTransform)
+- [strokes](FillableNode.md#strokes)
+- [translateX](FillableNode.md#translateX)
+- [translateY](FillableNode.md#translateY)
+- [type](FillableNode.md#type)
 
 ### Methods
 
-- [removeFromParent](ContainerNode.md#removeFromParent)
+- [removeFromParent](FillableNode.md#removeFromParent)
+
+## Properties
+
+### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+
+▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
+
+#### Inherited from
+
+[StrokableNode](StrokableNode.md).[DEFAULT_STROKE_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
 
 ## Accessors
 
@@ -51,7 +69,7 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 #### Inherited from
 
-Node.absoluteRotation
+StrokableNode.absoluteRotation
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -67,7 +85,7 @@ Node.absoluteRotation
 
 #### Inherited from
 
-Node.absoluteRotation
+StrokableNode.absoluteRotation
 
 ___
 
@@ -83,7 +101,7 @@ The node's absolute (global) transform.
 
 #### Inherited from
 
-Node.absoluteTransform
+StrokableNode.absoluteTransform
 
 ___
 
@@ -101,7 +119,7 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 
 #### Inherited from
 
-Node.allChildren
+StrokableNode.allChildren
 
 ___
 
@@ -121,7 +139,7 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 #### Inherited from
 
-Node.blendMode
+StrokableNode.blendMode
 
 • `set` **blendMode**(`value`): `void`
 
@@ -137,19 +155,23 @@ Node.blendMode
 
 #### Inherited from
 
-Node.blendMode
+StrokableNode.blendMode
 
 ___
 
-### <a id="children" name="children"></a> children
+### <a id="fills" name="fills"></a> fills
 
-• `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+• `get` **fills**(): [`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
 
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
+Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
 
 #### Returns
 
-[`ItemList`](ItemList.md)<[`Node`](Node.md)\>
+[`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
+
+#### Implementation of
+
+[IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
 
 ___
 
@@ -165,7 +187,7 @@ The node's name.
 
 #### Inherited from
 
-Node.name
+StrokableNode.name
 
 • `set` **name**(`name`): `void`
 
@@ -181,7 +203,7 @@ Node.name
 
 #### Inherited from
 
-Node.name
+StrokableNode.name
 
 ___
 
@@ -197,7 +219,7 @@ The node's opacity.
 
 #### Inherited from
 
-Node.opacity
+StrokableNode.opacity
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -213,7 +235,7 @@ Node.opacity
 
 #### Inherited from
 
-Node.opacity
+StrokableNode.opacity
 
 ___
 
@@ -229,7 +251,7 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 #### Inherited from
 
-Node.parent
+StrokableNode.parent
 
 ___
 
@@ -247,7 +269,7 @@ center, not its origin.
 
 #### Inherited from
 
-Node.relativeRotation
+StrokableNode.relativeRotation
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -263,7 +285,7 @@ Node.relativeRotation
 
 #### Inherited from
 
-Node.relativeRotation
+StrokableNode.relativeRotation
 
 ___
 
@@ -279,7 +301,23 @@ The node's transform relative to its parent.
 
 #### Inherited from
 
-Node.relativeTransform
+StrokableNode.relativeTransform
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](ItemList.md)<[`Stroke`](../interfaces/Stroke.md)\>
+
+Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](ItemList.md)<[`Stroke`](../interfaces/Stroke.md)\>
+
+#### Inherited from
+
+StrokableNode.strokes
 
 ___
 
@@ -295,7 +333,7 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 #### Inherited from
 
-Node.translateX
+StrokableNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -311,7 +349,7 @@ Node.translateX
 
 #### Inherited from
 
-Node.translateX
+StrokableNode.translateX
 
 ___
 
@@ -327,7 +365,7 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 #### Inherited from
 
-Node.translateY
+StrokableNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -343,7 +381,7 @@ Node.translateY
 
 #### Inherited from
 
-Node.translateY
+StrokableNode.translateY
 
 ___
 
@@ -359,7 +397,7 @@ The node's type.
 
 #### Inherited from
 
-Node.type
+StrokableNode.type
 
 ## Methods
 
@@ -377,4 +415,4 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Inherited from
 
-[Node](Node.md).[removeFromParent](Node.md#removeFromParent)
+[StrokableNode](StrokableNode.md).[removeFromParent](StrokableNode.md#removeFromParent)

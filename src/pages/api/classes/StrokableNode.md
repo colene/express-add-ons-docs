@@ -1,4 +1,4 @@
-[ /authoring-api](../overview.md) / StrokableNode
+[@add-on-hlapi-sdk](../overview.md) / StrokableNode
 
 # Class: StrokableNode
 
@@ -10,6 +10,8 @@ Base class for a Node that can have its own stroke.
 
   ↳ **`StrokableNode`**
 
+  ↳↳ [`FillableNode`](FillableNode.md)
+
   ↳↳ [`LineNode`](LineNode.md)
 
 ## Implements
@@ -18,13 +20,8 @@ Base class for a Node that can have its own stroke.
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](StrokableNode.md#constructor)
-
 ### Properties
 
-- [\_core](StrokableNode.md#_core)
 - [DEFAULT\_STROKE\_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
 
 ### Accessors
@@ -33,8 +30,6 @@ Base class for a Node that can have its own stroke.
 - [absoluteTransform](StrokableNode.md#absoluteTransform)
 - [allChildren](StrokableNode.md#allChildren)
 - [blendMode](StrokableNode.md#blendMode)
-- [entity](StrokableNode.md#entity)
-- [locked](StrokableNode.md#locked)
 - [name](StrokableNode.md#name)
 - [opacity](StrokableNode.md#opacity)
 - [parent](StrokableNode.md#parent)
@@ -47,54 +42,13 @@ Base class for a Node that can have its own stroke.
 
 ### Methods
 
-- [canRemoveChild](StrokableNode.md#canRemoveChild)
 - [removeFromParent](StrokableNode.md#removeFromParent)
-- [canChangeParent](StrokableNode.md#canChangeParent)
-
-## Constructors
-
-### <a id="constructor" name="constructor"></a> constructor
-
-• **new StrokableNode**(`_entity`, `_core`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_entity` | `string` |
-| `_core` | `CoreDependencies`<[`Node`](Node.md)\> |
-
-#### Inherited from
-
-[Node](Node.md).[constructor](Node.md#constructor)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
 
 ## Properties
-
-### <a id="_core" name="_core"></a> \_core
-
-• `Protected` `Readonly` **\_core**: `CoreDependencies`<[`Node`](Node.md)\>
-
-#### Inherited from
-
-[Node](Node.md).[_core](Node.md#_core)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:51
-
-___
 
 ### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
 
 ▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
-
-#### Defined in
-
-platform/authoring/api/src/StrokableNode.ts:36
 
 ## Accessors
 
@@ -112,10 +66,6 @@ The node's absolute rotation value in degrees (includes the parent chain rotatio
 
 Node.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:159
-
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -132,10 +82,6 @@ platform/authoring/api/src/Node.ts:159
 
 Node.absoluteRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:163
-
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -151,30 +97,6 @@ The node's absolute (global) transform.
 #### Inherited from
 
 Node.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:257
-
-• `set` **absoluteTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Node.absoluteTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:261
 
 ___
 
@@ -193,10 +115,6 @@ discrete "slots"; this `allChildren` list includes *all* such children and refle
 #### Inherited from
 
 Node.allChildren
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:58
 
 ___
 
@@ -218,10 +136,6 @@ are equivalent for leaf nodes, and only visually different for nodes with childr
 
 Node.blendMode
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:308
-
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -237,70 +151,6 @@ platform/authoring/api/src/Node.ts:308
 #### Inherited from
 
 Node.blendMode
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:311
-
-___
-
-### <a id="entity" name="entity"></a> entity
-
-• `get` **entity**(): `string`
-
-ECS entity for this node.
-
-#### Returns
-
-`string`
-
-#### Inherited from
-
-Node.entity
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:97
-
-___
-
-### <a id="locked" name="locked"></a> locked
-
-• `get` **locked**(): `boolean`
-
-The node's lock/unlock state.
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-Node.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:293
-
-• `set` **locked**(`locked`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `locked` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Node.locked
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:297
 
 ___
 
@@ -318,10 +168,6 @@ The node's name.
 
 Node.name
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:277
-
 • `set` **name**(`name`): `void`
 
 #### Parameters
@@ -337,10 +183,6 @@ platform/authoring/api/src/Node.ts:277
 #### Inherited from
 
 Node.name
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:281
 
 ___
 
@@ -358,10 +200,6 @@ The node's opacity.
 
 Node.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:234
-
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -378,10 +216,6 @@ platform/authoring/api/src/Node.ts:234
 
 Node.opacity
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:238
-
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -397,10 +231,6 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Inherited from
 
 Node.parent
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:211
 
 ___
 
@@ -420,10 +250,6 @@ center, not its origin.
 
 Node.relativeRotation
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:148
-
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -439,10 +265,6 @@ platform/authoring/api/src/Node.ts:148
 #### Inherited from
 
 Node.relativeRotation
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:152
 
 ___
 
@@ -460,30 +282,6 @@ The node's transform relative to its parent.
 
 Node.relativeTransform
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:246
-
-• `set` **relativeTransform**(`transform`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transform` | `mat2d` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Node.relativeTransform
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:250
-
 ___
 
 ### <a id="strokes" name="strokes"></a> strokes
@@ -499,10 +297,6 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 #### Implementation of
 
 IStrokableNode.strokes
-
-#### Defined in
-
-platform/authoring/api/src/StrokableNode.ts:41
 
 ___
 
@@ -520,10 +314,6 @@ The translation of the node along its parent's x-axis. Must be a finite number.
 
 Node.translateX
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:116
-
 • `set` **translateX**(`value`): `void`
 
 #### Parameters
@@ -539,10 +329,6 @@ platform/authoring/api/src/Node.ts:116
 #### Inherited from
 
 Node.translateX
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:120
 
 ___
 
@@ -560,10 +346,6 @@ The translation of the node along its parent's y-axis. Must be a finite number.
 
 Node.translateY
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:131
-
 • `set` **translateY**(`value`): `void`
 
 #### Parameters
@@ -580,59 +362,23 @@ platform/authoring/api/src/Node.ts:131
 
 Node.translateY
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:135
-
 ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 The node's type.
 
 #### Returns
 
-keyof `SceneNodeTypeValueExtensibleEnum` \| `ApiNodeType`
+[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
 #### Inherited from
 
 Node.type
 
-#### Defined in
-
-platform/authoring/api/src/Node.ts:104
-
 ## Methods
-
-### <a id="canRemoveChild" name="canRemoveChild"></a> canRemoveChild
-
-▸ `Protected` **canRemoveChild**(`_child`): `boolean`
-
-Indicates whether a given child of this node can be removed. Certain parent containers impose restrictions on their
-child structure; those subclasses should override this method to implement their specific rules. Do not call this
-directly though - use canChangeParent() instead.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_child` | [`Node`](Node.md) | A child of this node |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[Node](Node.md).[canRemoveChild](Node.md#canRemoveChild)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:70
-
-___
 
 ### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
 
@@ -649,37 +395,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [Node](Node.md).[removeFromParent](Node.md#removeFromParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:221
-
-___
-
-### <a id="canChangeParent" name="canChangeParent"></a> canChangeParent
-
-▸ `Static` `Protected` **canChangeParent**(`node`, `core`): `boolean`
-
-Use this to check if the parent of a given node can be changed: either adding the node to a new parent *and/or*
-removing the node from its current parent container.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `node` | [`Node`](Node.md) | The node whose parent would be changed |
-| `core` | `CoreDependencies`<[`Node`](Node.md)\> | - |
-
-#### Returns
-
-`boolean`
-
-True if it is allowed to change the parent at all.
-
-#### Inherited from
-
-[Node](Node.md).[canChangeParent](Node.md#canChangeParent)
-
-#### Defined in
-
-platform/authoring/api/src/Node.ts:82

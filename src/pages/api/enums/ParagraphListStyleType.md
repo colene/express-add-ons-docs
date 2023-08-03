@@ -1,9 +1,9 @@
-[ /authoring-api](../overview.md) / ParagraphListStyleType
+[@add-on-hlapi-sdk](../overview.md) / ParagraphListStyleType
 
 # Enumeration: ParagraphListStyleType
 
 ParagraphListStyleType enum for list types.
-See [UnorderedListStyle](../interfaces/UnorderedListStyle.md), [OrderedListStyle](../interfaces/OrderedListStyle.md)
+See UnorderedListStyle, OrderedListStyle
 
 ## Table of contents
 
@@ -18,16 +18,8 @@ See [UnorderedListStyle](../interfaces/UnorderedListStyle.md), [OrderedListStyle
 
 • **ordered** = ``1``
 
-#### Defined in
-
-platform/authoring/api/src/ParagraphStyles.ts:118
-
 ___
 
 ### <a id="unordered" name="unordered"></a> unordered
 
 • **unordered** = ``0``
-
-#### Defined in
-
-platform/authoring/api/src/ParagraphStyles.ts:117
