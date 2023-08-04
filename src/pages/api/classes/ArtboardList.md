@@ -2,7 +2,7 @@
 
 # Class: ArtboardList
 
-ArtboardList represents an ordered list of High Level API ArtboardNodes, representing
+ArtboardList represents an ordered list of ArtboardNodes, representing
 artboards that are children of a page node.
 
 ArtboardList also provides APIs for adding/removing ArtboardNodes from the list by adding/removing them

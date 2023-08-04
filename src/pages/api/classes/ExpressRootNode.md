@@ -2,8 +2,7 @@
 
 # Class: ExpressRootNode
 
-An ExpressRootNode represents the artwork object in the scenegraph. This class is the High Level API
-wrapper around the low-level APIs for interacting with the artwork in ECS.
+An ExpressRootNode represents the artwork object in the scenegraph.
 
 ## Hierarchy
 
@@ -69,13 +68,13 @@ ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
 
-• `get` **absoluteTransform**(): `mat2d`
+• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's absolute (global) transform.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 
@@ -265,13 +264,13 @@ ___
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
-• `get` **relativeTransform**(): `mat2d`
+• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's transform relative to its parent.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 

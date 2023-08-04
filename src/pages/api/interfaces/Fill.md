@@ -20,6 +20,6 @@ Represents a fill in the scene graph.
 
 ### <a id="type" name="type"></a> type
 
-• `Readonly` **type**: keyof `FillTypeValueExtensibleEnum`
+• `Readonly` **type**: keyof [`FillTypeValueExtensibleEnum`](FillTypeValueExtensibleEnum.md)
 
 The fill type.

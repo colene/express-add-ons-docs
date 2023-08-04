@@ -73,13 +73,13 @@ ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
 
-• `get` **absoluteTransform**(): `mat2d`
+• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's absolute (global) transform.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 ___
 
@@ -213,13 +213,13 @@ ___
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
-• `get` **relativeTransform**(): `mat2d`
+• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's transform relative to its parent.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 ___
 

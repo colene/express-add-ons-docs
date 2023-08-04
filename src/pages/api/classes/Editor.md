@@ -203,7 +203,7 @@ ___
 
 ▸ **loadBitmapImage**(`bitmapData`): `Promise`<[`BitmapImage`](../interfaces/BitmapImage.md)\>
 
-Creates a bitmap image ResourceCollection, which can be displayed in the document by passing it to createBitmapImage()
+Creates a bitmap image ResourceCollection, which can be displayed in the document by passing it to createImageContainer()
 to create a CropGroup node. The same BitmapImage can be used to create multiple CropGroups.
 
 #### Parameters

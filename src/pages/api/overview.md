@@ -27,7 +27,6 @@
 
 - [ArtboardList](classes/ArtboardList.md)
 - [ArtboardNode](classes/ArtboardNode.md)
-- [CharacterStyleRangeList](classes/CharacterStyleRangeList.md)
 - [Color](classes/Color.md)
 - [ContainerNode](classes/ContainerNode.md)
 - [Context](classes/Context.md)
@@ -43,11 +42,9 @@
 - [Node](classes/Node.md)
 - [PageList](classes/PageList.md)
 - [PageNode](classes/PageNode.md)
-- [ParagraphStyleRangeList](classes/ParagraphStyleRangeList.md)
 - [ReadOnlyItemList](classes/ReadOnlyItemList.md)
 - [RectangleNode](classes/RectangleNode.md)
 - [StrokableNode](classes/StrokableNode.md)
-- [StyleRangeList](classes/StyleRangeList.md)
 - [TextNode](classes/TextNode.md)
 
 ### Interfaces
@@ -55,10 +52,10 @@
 - [BitmapImage](interfaces/BitmapImage.md)
 - [ColorFill](interfaces/ColorFill.md)
 - [Fill](interfaces/Fill.md)
+- [FillTypeValueExtensibleEnum](interfaces/FillTypeValueExtensibleEnum.md)
 - [Utils](interfaces/Utils.md)
 - [IFillableNode](interfaces/IFillableNode.md)
 - [IRectangularNode](interfaces/IRectangularNode.md)
-- [InternalCharacterStyle](interfaces/InternalCharacterStyle.md)
 - [ListItem](interfaces/ListItem.md)
 - [RectangleGeometry](interfaces/RectangleGeometry.md)
 - [Stroke](interfaces/Stroke.md)
@@ -84,4 +81,4 @@ Renames and re-exports [InternalParagraphDirection](enums/InternalParagraphDirec
 
 ### <a id="FillTypeValueID" name="FillTypeValueID"></a> FillTypeValueID
 
-Ƭ **FillTypeValueID**: keyof `FillTypeValueExtensibleEnum`
+Ƭ **FillTypeValueID**: keyof [`FillTypeValueExtensibleEnum`](interfaces/FillTypeValueExtensibleEnum.md)

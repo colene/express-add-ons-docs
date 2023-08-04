@@ -18,10 +18,8 @@ A TextNode represents a text object in the scenegraph.
 - [absoluteTransform](TextNode.md#absoluteTransform)
 - [allChildren](TextNode.md#allChildren)
 - [blendMode](TextNode.md#blendMode)
-- [characterStyleRanges](TextNode.md#characterStyleRanges)
 - [name](TextNode.md#name)
 - [opacity](TextNode.md#opacity)
-- [paragraphStyleRanges](TextNode.md#paragraphStyleRanges)
 - [parent](TextNode.md#parent)
 - [relativeRotation](TextNode.md#relativeRotation)
 - [relativeTransform](TextNode.md#relativeTransform)
@@ -72,13 +70,13 @@ ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
 
-• `get` **absoluteTransform**(): `mat2d`
+• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's absolute (global) transform.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 
@@ -137,18 +135,6 @@ Node.blendMode
 #### Inherited from
 
 Node.blendMode
-
-___
-
-### <a id="characterStyleRanges" name="characterStyleRanges"></a> characterStyleRanges
-
-• `get` **characterStyleRanges**(): [`CharacterStyleRangeList`](CharacterStyleRangeList.md)
-
-The character style ranges of a text node.
-
-#### Returns
-
-[`CharacterStyleRangeList`](CharacterStyleRangeList.md)
 
 ___
 
@@ -216,18 +202,6 @@ Node.opacity
 
 ___
 
-### <a id="paragraphStyleRanges" name="paragraphStyleRanges"></a> paragraphStyleRanges
-
-• `get` **paragraphStyleRanges**(): [`ParagraphStyleRangeList`](ParagraphStyleRangeList.md)
-
-The paragraph style ranges of a text node.
-
-#### Returns
-
-[`ParagraphStyleRangeList`](ParagraphStyleRangeList.md)
-
-___
-
 ### <a id="parent" name="parent"></a> parent
 
 • `get` **parent**(): `undefined` \| [`Node`](Node.md)
@@ -280,13 +254,13 @@ ___
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
-• `get` **relativeTransform**(): `mat2d`
+• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's transform relative to its parent.
 
 #### Returns
 
-`mat2d`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 
