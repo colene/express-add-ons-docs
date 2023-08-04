@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Namespaces
+
+- [Constants](modules/Constants.md)
+
 ### Enumerations
 
 - [ArrowHeadType](enums/ArrowHeadType.md)
