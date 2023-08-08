@@ -32,7 +32,6 @@ A TextNode represents a text object in the scenegraph.
 ### Methods
 
 - [removeFromParent](TextNode.md#removeFromParent)
-- [resize](TextNode.md#resize)
 
 ## Accessors
 
@@ -411,23 +410,3 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Inherited from
 
 [Node](Node.md).[removeFromParent](Node.md#removeFromParent)
-
-___
-
-### <a id="resize" name="resize"></a> resize
-
-▸ **resize**(`width`, `height`): `void`
-
-Resizes the text node. Note that unlike other node types, TextNode uses this resize
-method instead of 'node.width' and 'node.height' due to unique behavior for text.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `width` | `number` | the width of the node |
-| `height` | `number` | the height of the node |
-
-#### Returns
-
-`void`
